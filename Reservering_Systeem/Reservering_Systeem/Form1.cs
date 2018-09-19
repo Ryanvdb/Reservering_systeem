@@ -20,6 +20,7 @@ namespace Reservering_Systeem
         private void Form1_Load(object sender, EventArgs e)
         {
             button1.Show();
+            Console.WriteLine("hello there");
         }
     }
 }
