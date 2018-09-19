@@ -30,9 +30,9 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
+            //
             // button1
-            // 
+            //
             this.button1.Location = new System.Drawing.Point(79, 71);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.button1.Name = "button1";
@@ -40,9 +40,9 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "aaaa";
             this.button1.UseVisualStyleBackColor = true;
-            // 
+            //
             // Form1
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 311);
