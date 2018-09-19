@@ -16,5 +16,10 @@ namespace Reservering_Systeem
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            button1.Show();
+        }
     }
 }
