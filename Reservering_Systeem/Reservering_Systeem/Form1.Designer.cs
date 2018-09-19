@@ -38,11 +38,11 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 37);
             this.button1.TabIndex = 0;
-<<<<<<< HEAD
+
             this.button1.Text = "Ayy";
-=======
+
             this.button1.Text = "general kenobi";
->>>>>>> 72f421af9f34405874791671edc4bd856128be68
+
             this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
