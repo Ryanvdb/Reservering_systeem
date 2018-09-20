@@ -16,12 +16,15 @@ namespace Reservering_Systeem
         string connstring = "Server=localhost;Database=reservatie;Uid=root;";
         MySqlConnection connObj;
 
-        private void Form1_Load(object sender, EventArgs e) {
+        private void Form1_Load(object sender, EventArgs e)
+        {
             LoadData();
         }
 
-        private void LoadData() {
-            try {
+        private void LoadData()
+        {
+            try
+            {
                 connObj = new MySqlConnection(connstring);
                 Console.WriteLine("Connecting to MySQL...");
                 connObj.Open();
@@ -30,7 +33,8 @@ namespace Reservering_Systeem
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
                 MySqlDataReader rdr = cmd.ExecuteReader();
 
-                while (rdr.Read()) {
+                while (rdr.Read())
+                {
                     ListViewItem item = new ListViewItem(Convert.ToString(rdr[0]));
                     for (int i = 1; i < 3; i++)
                     {
@@ -39,7 +43,8 @@ namespace Reservering_Systeem
                 }
                 rdr.Close();
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.ToString());
             }
 
