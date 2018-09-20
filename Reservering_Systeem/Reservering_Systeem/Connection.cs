@@ -14,7 +14,7 @@ namespace Reservering_Systeem
         string connstring = "Server=localhost;Database=reservatie_systeem;Uid=root;SslMode=none";
         MySqlConnection connObj;
 
-        public void LoadData(/*ListView listView*/)
+        public void LoadData()
         {
             try
             {

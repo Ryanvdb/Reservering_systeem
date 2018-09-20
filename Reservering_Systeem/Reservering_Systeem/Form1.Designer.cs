@@ -30,13 +30,15 @@
         {
             this.specsPanel = new System.Windows.Forms.Panel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.availableProductPanel = new System.Windows.Forms.Panel();
             this.productPanel = new System.Windows.Forms.Panel();
             this.bannerPanel = new System.Windows.Forms.Panel();
             this.accountPanel = new System.Windows.Forms.Panel();
             this.reservationButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
+            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.flowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // specsPanel
@@ -57,15 +59,6 @@
             this.pictureBox.Size = new System.Drawing.Size(1187, 693);
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
-            // 
-            // availableProductPanel
-            // 
-            this.availableProductPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.availableProductPanel.Location = new System.Drawing.Point(340, 800);
-            this.availableProductPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.availableProductPanel.Name = "availableProductPanel";
-            this.availableProductPanel.Size = new System.Drawing.Size(1187, 222);
-            this.availableProductPanel.TabIndex = 2;
             // 
             // productPanel
             // 
@@ -97,6 +90,7 @@
             // reservationButton
             // 
             this.reservationButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.reservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reservationButton.Location = new System.Drawing.Point(1533, 968);
             this.reservationButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reservationButton.Name = "reservationButton";
@@ -108,6 +102,7 @@
             // backButton
             // 
             this.backButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.Location = new System.Drawing.Point(1834, 968);
             this.backButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backButton.Name = "backButton";
@@ -116,23 +111,43 @@
             this.backButton.Text = "<";
             this.backButton.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutPanel
+            // 
+            this.flowLayoutPanel.AutoScroll = true;
+            this.flowLayoutPanel.Controls.Add(this.button2);
+            this.flowLayoutPanel.Location = new System.Drawing.Point(340, 801);
+            this.flowLayoutPanel.Name = "flowLayoutPanel";
+            this.flowLayoutPanel.Size = new System.Drawing.Size(1187, 220);
+            this.flowLayoutPanel.TabIndex = 6;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(3, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(227, 39);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "button1";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.flowLayoutPanel);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.reservationButton);
             this.Controls.Add(this.accountPanel);
             this.Controls.Add(this.bannerPanel);
             this.Controls.Add(this.productPanel);
-            this.Controls.Add(this.availableProductPanel);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.specsPanel);
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            this.flowLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -140,11 +155,12 @@
         #endregion
         private System.Windows.Forms.Panel specsPanel;
         private System.Windows.Forms.PictureBox pictureBox;
-        private System.Windows.Forms.Panel availableProductPanel;
         private System.Windows.Forms.Panel productPanel;
         private System.Windows.Forms.Panel bannerPanel;
         private System.Windows.Forms.Panel accountPanel;
         private System.Windows.Forms.Button reservationButton;
         private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
+        private System.Windows.Forms.Button button2;
     }
 }
