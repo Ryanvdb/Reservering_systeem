@@ -14,7 +14,7 @@ namespace Reservering_Systeem
         string connstring = "Server=localhost;Database=reservatie_systeem;Uid=root;SslMode=none";
         MySqlConnection connObj;
 
-        public void LoadData()
+        public void LoadData(FlowLayoutPanel flowLayoutPanel)
         {
             try
             {
@@ -22,18 +22,18 @@ namespace Reservering_Systeem
                 Debug.WriteLine("Connecting to MySQL...");
                 connObj.Open();
 
-                string sql = "SELECT naam FROM `users`";
+                string sql = "SELECT Model FROM `producten`";
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
                 MySqlDataReader rdr = cmd.ExecuteReader();
 
                 while (rdr.Read())
                 {
-                    ListViewItem item = new ListViewItem(Convert.ToString(rdr[0]));
-
                     for (int i = 0; i < rdr.FieldCount; i++)
                     {
-                        item.SubItems.Add(Convert.ToString(rdr[i]));
-                        //listView.Items.Add(item);
+                        ProductButton productButton = new ProductButton();
+                        productButton.button.Text = Convert.ToString(rdr[i]);
+
+                        flowLayoutPanel.Controls.Add(productButton);                       
                     }
                 }
                 rdr.Close();

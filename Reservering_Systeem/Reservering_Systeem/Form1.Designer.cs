@@ -36,9 +36,7 @@
             this.reservationButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
-            this.flowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // specsPanel
@@ -114,21 +112,10 @@
             // flowLayoutPanel
             // 
             this.flowLayoutPanel.AutoScroll = true;
-            this.flowLayoutPanel.Controls.Add(this.button2);
             this.flowLayoutPanel.Location = new System.Drawing.Point(340, 801);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Size = new System.Drawing.Size(1187, 220);
             this.flowLayoutPanel.TabIndex = 6;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(227, 39);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "button1";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -147,7 +134,6 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
-            this.flowLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -161,6 +147,5 @@
         private System.Windows.Forms.Button reservationButton;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
-        private System.Windows.Forms.Button button2;
     }
 }
