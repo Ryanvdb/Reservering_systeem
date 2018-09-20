@@ -17,7 +17,7 @@ namespace Reservering_Systeem
         {
             InitializeComponent();
             GetDatabaseData();
-        }       
+        }
 
         private void GetDatabaseData()
         {
