@@ -42,7 +42,7 @@
             // specsPanel
             // 
             this.specsPanel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.specsPanel.Location = new System.Drawing.Point(1564, 103);
+            this.specsPanel.Location = new System.Drawing.Point(1565, 103);
             this.specsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.specsPanel.Name = "specsPanel";
             this.specsPanel.Size = new System.Drawing.Size(325, 761);
@@ -56,14 +56,14 @@
             this.pictureBox.Location = new System.Drawing.Point(264, 103);
             this.pictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(1293, 761);
+            this.pictureBox.Size = new System.Drawing.Size(1294, 761);
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             // 
             // availableProductPanel
             // 
             this.availableProductPanel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.availableProductPanel.Location = new System.Drawing.Point(264, 870);
+            this.availableProductPanel.Location = new System.Drawing.Point(265, 870);
             this.availableProductPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.availableProductPanel.Name = "availableProductPanel";
             this.availableProductPanel.Size = new System.Drawing.Size(1293, 151);
@@ -89,7 +89,7 @@
             // accountPanel
             // 
             this.accountPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.accountPanel.Location = new System.Drawing.Point(1564, 12);
+            this.accountPanel.Location = new System.Drawing.Point(1565, 12);
             this.accountPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.accountPanel.Name = "accountPanel";
             this.accountPanel.Size = new System.Drawing.Size(325, 86);
@@ -98,7 +98,7 @@
             // reservationButton
             // 
             this.reservationButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.reservationButton.Location = new System.Drawing.Point(1564, 967);
+            this.reservationButton.Location = new System.Drawing.Point(1565, 967);
             this.reservationButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reservationButton.Name = "reservationButton";
             this.reservationButton.Size = new System.Drawing.Size(267, 54);
@@ -109,7 +109,7 @@
             // backButton
             // 
             this.backButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.backButton.Location = new System.Drawing.Point(1836, 967);
+            this.backButton.Location = new System.Drawing.Point(1837, 967);
             this.backButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(56, 54);
@@ -121,7 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1901, 1033);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.reservationButton);
             this.Controls.Add(this.accountPanel);
