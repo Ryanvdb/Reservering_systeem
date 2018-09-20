@@ -22,7 +22,7 @@ namespace Reservering_Systeem
         private void GetDatabaseData()
         {
             Connection connection = new Connection();
-            connection.LoadData(listView);
+            connection.LoadData(/*listView*/);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Reservering_Systeem
         string connstring = "Server=localhost;Database=reservatie_systeem;Uid=root;SslMode=none";
         MySqlConnection connObj;
 
-        public void LoadData(ListView listView)
+        public void LoadData(/*ListView listView*/)
         {
             try
             {
@@ -33,7 +33,7 @@ namespace Reservering_Systeem
                     for (int i = 0; i < rdr.FieldCount; i++)
                     {
                         item.SubItems.Add(Convert.ToString(rdr[i]));
-                        listView.Items.Add(item);
+                        //listView.Items.Add(item);
                     }
                 }
                 rdr.Close();
