@@ -41,75 +41,74 @@
             // 
             // specsPanel
             // 
-            this.specsPanel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.specsPanel.Location = new System.Drawing.Point(2179, 92);
+            this.specsPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.specsPanel.Location = new System.Drawing.Point(1533, 103);
             this.specsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.specsPanel.Name = "specsPanel";
-            this.specsPanel.Size = new System.Drawing.Size(325, 1009);
+            this.specsPanel.Size = new System.Drawing.Size(357, 693);
             this.specsPanel.TabIndex = 1;
             // 
             // pictureBox
             // 
-            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox.Location = new System.Drawing.Point(264, 103);
+            this.pictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox.Location = new System.Drawing.Point(340, 103);
             this.pictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(1909, 987);
+            this.pictureBox.Size = new System.Drawing.Size(1187, 693);
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             // 
             // availableProductPanel
             // 
-            this.availableProductPanel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.availableProductPanel.Location = new System.Drawing.Point(253, 1097);
+            this.availableProductPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.availableProductPanel.Location = new System.Drawing.Point(340, 800);
             this.availableProductPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.availableProductPanel.Name = "availableProductPanel";
-            this.availableProductPanel.Size = new System.Drawing.Size(1931, 151);
+            this.availableProductPanel.Size = new System.Drawing.Size(1187, 222);
             this.availableProductPanel.TabIndex = 2;
             // 
             // productPanel
             // 
-            this.productPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.productPanel.Location = new System.Drawing.Point(12, 81);
+            this.productPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.productPanel.Location = new System.Drawing.Point(12, 103);
             this.productPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.productPanel.Name = "productPanel";
-            this.productPanel.Size = new System.Drawing.Size(245, 1166);
+            this.productPanel.Size = new System.Drawing.Size(322, 919);
             this.productPanel.TabIndex = 2;
             // 
             // bannerPanel
             // 
+            this.bannerPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bannerPanel.Location = new System.Drawing.Point(12, 12);
             this.bannerPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bannerPanel.Name = "bannerPanel";
-            this.bannerPanel.Size = new System.Drawing.Size(2183, 86);
+            this.bannerPanel.Size = new System.Drawing.Size(1515, 86);
             this.bannerPanel.TabIndex = 3;
             // 
             // accountPanel
             // 
-            this.accountPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.accountPanel.Location = new System.Drawing.Point(2179, 12);
+            this.accountPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.accountPanel.Location = new System.Drawing.Point(1533, 12);
             this.accountPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.accountPanel.Name = "accountPanel";
-            this.accountPanel.Size = new System.Drawing.Size(325, 86);
+            this.accountPanel.Size = new System.Drawing.Size(357, 86);
             this.accountPanel.TabIndex = 4;
             // 
             // reservationButton
             // 
-            this.reservationButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.reservationButton.Location = new System.Drawing.Point(2179, 1194);
+            this.reservationButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.reservationButton.Location = new System.Drawing.Point(1533, 968);
             this.reservationButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reservationButton.Name = "reservationButton";
-            this.reservationButton.Size = new System.Drawing.Size(267, 54);
+            this.reservationButton.Size = new System.Drawing.Size(295, 54);
             this.reservationButton.TabIndex = 5;
             this.reservationButton.Text = "Reserveren";
             this.reservationButton.UseVisualStyleBackColor = true;
             // 
             // backButton
             // 
-            this.backButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.backButton.Location = new System.Drawing.Point(2451, 1194);
+            this.backButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.backButton.Location = new System.Drawing.Point(1834, 968);
             this.backButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(56, 54);
