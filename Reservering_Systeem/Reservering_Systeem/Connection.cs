@@ -31,9 +31,9 @@ namespace Reservering_Systeem
                     ProductButton addedProduct = new ProductButton();
 
                     addedProduct.productId = rdr["Product_id"].ToString();
-                    addedProduct.productAge = rdr["Naam"].ToString();
+                    addedProduct.productName = rdr["naam"].ToString();
                     addedProduct.modelName = rdr["Model"].ToString();
-                    addedProduct.productName = rdr["Leeftijd"].ToString();
+                     addedProduct.productAge = rdr["leeftijd"].ToString();
 
                     addedProduct.button.Text = addedProduct.modelName;
                     flowLayoutPanel.Controls.Add(addedProduct);

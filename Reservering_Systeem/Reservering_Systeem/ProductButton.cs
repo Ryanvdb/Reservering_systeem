@@ -12,8 +12,6 @@ namespace Reservering_Systeem
 {
     public partial class ProductButton : UserControl
     {
-        Form1 frm1 = (Form1)Application.OpenForms["Form1"];
-
         public string productId;
         public string productAge;
         public string modelName;
@@ -26,7 +24,11 @@ namespace Reservering_Systeem
 
         private void button_MouseClick(object sender, MouseEventArgs e)
         {
-            MessageBox.Show(productName + " / " + modelName + " / " + productId + " / " + productAge);
+            Form1 frm1 = (Form1)Application.OpenForms["Form1"];
+            frm1.nameTextbox.Text = productName;
+            frm1.modelTextbox.Text = modelName;
+            frm1.idTextbox.Text = productId;
+            frm1.ageTextbox.Text = productAge;
         }
     }
 }
