@@ -11,6 +11,8 @@ namespace Reservering_Systeem
 {
     class Connection
     {
+        List<Product> productList = new List<Product>();
+
         string connstring = "Server=localhost;Database=reservatie_systeem;Uid=root;SslMode=none";
         MySqlConnection connObj;
 
@@ -22,19 +24,25 @@ namespace Reservering_Systeem
                 Debug.WriteLine("Connecting to MySQL...");
                 connObj.Open();
 
-                string sql = "SELECT Model FROM `producten`";
+                string sql = "SELECT * FROM `producten`";
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
                 MySqlDataReader rdr = cmd.ExecuteReader();
 
                 while (rdr.Read())
                 {
-                    for (int i = 0; i < rdr.FieldCount; i++)
-                    {
-                        ProductButton productButton = new ProductButton();
-                        productButton.button.Text = Convert.ToString(rdr[i]);
+                    Product addedProduct = new Product();
 
-                        flowLayoutPanel.Controls.Add(productButton);                       
+                    for (int j = 0; j < 4; j++)
+                    {
+                        addedProduct.productId = rdr["Product_id"].ToString();
+                        addedProduct.productAge = rdr["Naam"].ToString();
+                        addedProduct.modelName = rdr["Model"].ToString();
+                        addedProduct.productName = rdr["Leeftijd"].ToString();
                     }
+
+                    addedProduct.usercontrolButton.button.Text = addedProduct.modelName;
+                    flowLayoutPanel.Controls.Add(addedProduct.usercontrolButton);
+                    productList.Add(addedProduct);
                 }
                 rdr.Close();
             }
@@ -46,5 +54,15 @@ namespace Reservering_Systeem
             connObj.Close();
             Debug.WriteLine("Done.");
         }
+    }
+
+    public class Product
+    {
+        public string productId;
+        public string productAge;
+        public string modelName;
+        public string productName;
+
+        public ProductButton usercontrolButton = new ProductButton();
     }
 }
