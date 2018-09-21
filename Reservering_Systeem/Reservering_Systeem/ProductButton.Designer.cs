@@ -38,8 +38,9 @@
             this.button.Name = "button";
             this.button.Size = new System.Drawing.Size(227, 39);
             this.button.TabIndex = 7;
-            this.button.Text = "button1";
+            this.button.Text = "Button";
             this.button.UseVisualStyleBackColor = true;
+            this.button.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_MouseClick);
             // 
             // ProductButton
             // 

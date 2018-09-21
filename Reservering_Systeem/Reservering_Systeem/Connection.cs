@@ -11,8 +11,6 @@ namespace Reservering_Systeem
 {
     class Connection
     {
-        List<Product> productList = new List<Product>();
-
         string connstring = "Server=localhost;Database=reservatie_systeem;Uid=root;SslMode=none";
         MySqlConnection connObj;
 
@@ -30,19 +28,15 @@ namespace Reservering_Systeem
 
                 while (rdr.Read())
                 {
-                    Product addedProduct = new Product();
+                    ProductButton addedProduct = new ProductButton();
 
-                    for (int j = 0; j < 4; j++)
-                    {
-                        addedProduct.productId = rdr["Product_id"].ToString();
-                        addedProduct.productAge = rdr["Naam"].ToString();
-                        addedProduct.modelName = rdr["Model"].ToString();
-                        addedProduct.productName = rdr["Leeftijd"].ToString();
-                    }
+                    addedProduct.productId = rdr["Product_id"].ToString();
+                    addedProduct.productAge = rdr["Naam"].ToString();
+                    addedProduct.modelName = rdr["Model"].ToString();
+                    addedProduct.productName = rdr["Leeftijd"].ToString();
 
-                    addedProduct.usercontrolButton.button.Text = addedProduct.modelName;
-                    flowLayoutPanel.Controls.Add(addedProduct.usercontrolButton);
-                    productList.Add(addedProduct);
+                    addedProduct.button.Text = addedProduct.modelName;
+                    flowLayoutPanel.Controls.Add(addedProduct);
                 }
                 rdr.Close();
             }
@@ -54,15 +48,5 @@ namespace Reservering_Systeem
             connObj.Close();
             Debug.WriteLine("Done.");
         }
-    }
-
-    public class Product
-    {
-        public string productId;
-        public string productAge;
-        public string modelName;
-        public string productName;
-
-        public ProductButton usercontrolButton = new ProductButton();
     }
 }

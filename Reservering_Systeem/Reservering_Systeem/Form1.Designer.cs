@@ -36,13 +36,30 @@
             this.reservationButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.nameTextbox = new System.Windows.Forms.RichTextBox();
+            this.modelTextbox = new System.Windows.Forms.RichTextBox();
+            this.idTextbox = new System.Windows.Forms.RichTextBox();
+            this.ageTextbox = new System.Windows.Forms.RichTextBox();
+            this.specsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // specsPanel
             // 
             this.specsPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.specsPanel.Location = new System.Drawing.Point(1533, 103);
+            this.specsPanel.Controls.Add(this.ageTextbox);
+            this.specsPanel.Controls.Add(this.idTextbox);
+            this.specsPanel.Controls.Add(this.modelTextbox);
+            this.specsPanel.Controls.Add(this.nameTextbox);
+            this.specsPanel.Controls.Add(this.richTextBox4);
+            this.specsPanel.Controls.Add(this.richTextBox3);
+            this.specsPanel.Controls.Add(this.richTextBox2);
+            this.specsPanel.Controls.Add(this.richTextBox1);
+            this.specsPanel.Location = new System.Drawing.Point(1412, 103);
             this.specsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.specsPanel.Name = "specsPanel";
             this.specsPanel.Size = new System.Drawing.Size(357, 693);
@@ -54,7 +71,7 @@
             this.pictureBox.Location = new System.Drawing.Point(340, 103);
             this.pictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(1187, 693);
+            this.pictureBox.Size = new System.Drawing.Size(1066, 693);
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             // 
@@ -73,13 +90,13 @@
             this.bannerPanel.Location = new System.Drawing.Point(12, 12);
             this.bannerPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bannerPanel.Name = "bannerPanel";
-            this.bannerPanel.Size = new System.Drawing.Size(1515, 86);
+            this.bannerPanel.Size = new System.Drawing.Size(1394, 86);
             this.bannerPanel.TabIndex = 3;
             // 
             // accountPanel
             // 
             this.accountPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.accountPanel.Location = new System.Drawing.Point(1533, 12);
+            this.accountPanel.Location = new System.Drawing.Point(1412, 11);
             this.accountPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.accountPanel.Name = "accountPanel";
             this.accountPanel.Size = new System.Drawing.Size(357, 86);
@@ -89,7 +106,7 @@
             // 
             this.reservationButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.reservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reservationButton.Location = new System.Drawing.Point(1533, 968);
+            this.reservationButton.Location = new System.Drawing.Point(1412, 967);
             this.reservationButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reservationButton.Name = "reservationButton";
             this.reservationButton.Size = new System.Drawing.Size(295, 54);
@@ -101,7 +118,7 @@
             // 
             this.backButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Location = new System.Drawing.Point(1834, 968);
+            this.backButton.Location = new System.Drawing.Point(1713, 967);
             this.backButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(56, 54);
@@ -114,8 +131,88 @@
             this.flowLayoutPanel.AutoScroll = true;
             this.flowLayoutPanel.Location = new System.Drawing.Point(340, 801);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(1187, 220);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(1066, 220);
             this.flowLayoutPanel.TabIndex = 6;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Enabled = false;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(23, 29);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(204, 37);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "Product Name";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Enabled = false;
+            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox2.Location = new System.Drawing.Point(23, 72);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(204, 37);
+            this.richTextBox2.TabIndex = 1;
+            this.richTextBox2.Text = "Product Model";
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Enabled = false;
+            this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox3.Location = new System.Drawing.Point(23, 115);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(204, 37);
+            this.richTextBox3.TabIndex = 2;
+            this.richTextBox3.Text = "Product ID";
+            // 
+            // richTextBox4
+            // 
+            this.richTextBox4.Enabled = false;
+            this.richTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox4.Location = new System.Drawing.Point(23, 158);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.Size = new System.Drawing.Size(204, 37);
+            this.richTextBox4.TabIndex = 3;
+            this.richTextBox4.Text = "Product Age";
+            // 
+            // nameTextbox
+            // 
+            this.nameTextbox.Enabled = false;
+            this.nameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTextbox.Location = new System.Drawing.Point(233, 29);
+            this.nameTextbox.Name = "nameTextbox";
+            this.nameTextbox.Size = new System.Drawing.Size(98, 37);
+            this.nameTextbox.TabIndex = 4;
+            this.nameTextbox.Text = "";
+            // 
+            // modelTextbox
+            // 
+            this.modelTextbox.Enabled = false;
+            this.modelTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modelTextbox.Location = new System.Drawing.Point(233, 72);
+            this.modelTextbox.Name = "modelTextbox";
+            this.modelTextbox.Size = new System.Drawing.Size(98, 37);
+            this.modelTextbox.TabIndex = 5;
+            this.modelTextbox.Text = "";
+            // 
+            // idTextbox
+            // 
+            this.idTextbox.Enabled = false;
+            this.idTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idTextbox.Location = new System.Drawing.Point(233, 115);
+            this.idTextbox.Name = "idTextbox";
+            this.idTextbox.Size = new System.Drawing.Size(98, 37);
+            this.idTextbox.TabIndex = 6;
+            this.idTextbox.Text = "";
+            // 
+            // ageTextbox
+            // 
+            this.ageTextbox.Enabled = false;
+            this.ageTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ageTextbox.Location = new System.Drawing.Point(233, 158);
+            this.ageTextbox.Name = "ageTextbox";
+            this.ageTextbox.Size = new System.Drawing.Size(98, 37);
+            this.ageTextbox.TabIndex = 7;
+            this.ageTextbox.Text = "";
             // 
             // Form1
             // 
@@ -133,6 +230,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.specsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -147,5 +245,13 @@
         private System.Windows.Forms.Button reservationButton;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
+        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        public System.Windows.Forms.RichTextBox ageTextbox;
+        public System.Windows.Forms.RichTextBox idTextbox;
+        public System.Windows.Forms.RichTextBox modelTextbox;
+        public System.Windows.Forms.RichTextBox nameTextbox;
     }
 }
