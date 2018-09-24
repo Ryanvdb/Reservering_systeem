@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
 
 namespace Reservering_Systeem
 {
@@ -33,7 +35,8 @@ namespace Reservering_Systeem
                     addedProduct.productId = rdr["Product_id"].ToString();
                     addedProduct.productName = rdr["naam"].ToString();
                     addedProduct.modelName = rdr["Model"].ToString();
-                     addedProduct.productAge = rdr["leeftijd"].ToString();
+                    addedProduct.productAge = rdr["leeftijd"].ToString();
+                    addedProduct.ProductImage = img((byte[])rdr["ProductImage"]);
 
                     addedProduct.button.Text = addedProduct.modelName;
                     flowLayoutPanel.Controls.Add(addedProduct);
@@ -47,6 +50,14 @@ namespace Reservering_Systeem
 
             connObj.Close();
             Debug.WriteLine("Done.");
+        }
+
+        private Image img(byte[] b)
+        {
+            using(var ms = new MemoryStream(b))
+            {
+                return Image.FromStream(ms);
+            }
         }
     }
 }

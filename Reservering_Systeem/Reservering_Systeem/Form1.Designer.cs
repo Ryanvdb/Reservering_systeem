@@ -127,7 +127,7 @@
             this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox4.Enabled = false;
             this.richTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox4.Location = new System.Drawing.Point(0, 128);
+            this.richTextBox4.Location = new System.Drawing.Point(2, 128);
             this.richTextBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.Size = new System.Drawing.Size(154, 31);
@@ -140,7 +140,7 @@
             this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox3.Enabled = false;
             this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox3.Location = new System.Drawing.Point(0, 93);
+            this.richTextBox3.Location = new System.Drawing.Point(2, 93);
             this.richTextBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(154, 31);
@@ -153,7 +153,7 @@
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox2.Enabled = false;
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(0, 58);
+            this.richTextBox2.Location = new System.Drawing.Point(2, 58);
             this.richTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(154, 31);
@@ -166,7 +166,7 @@
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Enabled = false;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(0, 24);
+            this.richTextBox1.Location = new System.Drawing.Point(2, 23);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(154, 31);
@@ -267,7 +267,6 @@
 
         #endregion
         private System.Windows.Forms.Panel specsPanel;
-        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Panel productPanel;
         private System.Windows.Forms.Panel bannerPanel;
         private System.Windows.Forms.Panel accountPanel;
@@ -282,5 +281,6 @@
         public System.Windows.Forms.RichTextBox idTextbox;
         public System.Windows.Forms.RichTextBox modelTextbox;
         public System.Windows.Forms.RichTextBox nameTextbox;
+        public System.Windows.Forms.PictureBox pictureBox;
     }
 }

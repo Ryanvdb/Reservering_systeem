@@ -16,6 +16,7 @@ namespace Reservering_Systeem
         public string productAge;
         public string modelName;
         public string productName;
+        public Image ProductImage;
 
         public ProductButton()
         {
@@ -29,6 +30,7 @@ namespace Reservering_Systeem
             frm1.modelTextbox.Text = modelName;
             frm1.idTextbox.Text = productId;
             frm1.ageTextbox.Text = productAge;
+            frm1.pictureBox.Image = ProductImage;
         }
     }
 }
