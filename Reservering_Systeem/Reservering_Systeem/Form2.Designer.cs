@@ -35,6 +35,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.sumbitLogin = new System.Windows.Forms.Button();
+            this.invalidTextbox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Controls.Add(this.invalidTextbox);
             this.panel1.Controls.Add(this.sumbitLogin);
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.textBox3);
@@ -115,6 +117,19 @@
             this.sumbitLogin.UseVisualStyleBackColor = false;
             this.sumbitLogin.Click += new System.EventHandler(this.sumbitLogin_Click);
             // 
+            // invalidTextbox
+            // 
+            this.invalidTextbox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.invalidTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.invalidTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.invalidTextbox.ForeColor = System.Drawing.Color.Red;
+            this.invalidTextbox.Location = new System.Drawing.Point(14, 15);
+            this.invalidTextbox.Name = "invalidTextbox";
+            this.invalidTextbox.Size = new System.Drawing.Size(242, 17);
+            this.invalidTextbox.TabIndex = 4;
+            this.invalidTextbox.Text = "Username or password invalid";
+            this.invalidTextbox.Visible = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -123,6 +138,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -138,5 +154,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button sumbitLogin;
+        private System.Windows.Forms.TextBox invalidTextbox;
     }
 }
