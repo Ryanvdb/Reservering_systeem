@@ -62,7 +62,7 @@
             this.specsPanel.Controls.Add(this.richTextBox3);
             this.specsPanel.Controls.Add(this.richTextBox2);
             this.specsPanel.Controls.Add(this.richTextBox1);
-            this.specsPanel.Location = new System.Drawing.Point(1059, 84);
+            this.specsPanel.Location = new System.Drawing.Point(1641, 85);
             this.specsPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.specsPanel.Name = "specsPanel";
             this.specsPanel.Size = new System.Drawing.Size(268, 563);
@@ -179,29 +179,29 @@
             // pictureBox
             // 
             this.pictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox.Location = new System.Drawing.Point(255, 84);
+            this.pictureBox.Location = new System.Drawing.Point(257, 85);
             this.pictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(800, 563);
+            this.pictureBox.Size = new System.Drawing.Size(1380, 741);
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             // 
             // productPanel
             // 
             this.productPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.productPanel.Location = new System.Drawing.Point(9, 84);
+            this.productPanel.Location = new System.Drawing.Point(11, 85);
             this.productPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.productPanel.Name = "productPanel";
-            this.productPanel.Size = new System.Drawing.Size(242, 747);
+            this.productPanel.Size = new System.Drawing.Size(242, 984);
             this.productPanel.TabIndex = 2;
             // 
             // bannerPanel
             // 
             this.bannerPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bannerPanel.Location = new System.Drawing.Point(9, 10);
+            this.bannerPanel.Location = new System.Drawing.Point(9, 11);
             this.bannerPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bannerPanel.Name = "bannerPanel";
-            this.bannerPanel.Size = new System.Drawing.Size(1046, 70);
+            this.bannerPanel.Size = new System.Drawing.Size(1628, 70);
             this.bannerPanel.TabIndex = 3;
             // 
             // accountPanel
@@ -209,7 +209,7 @@
             this.accountPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.accountPanel.Controls.Add(this.RtbUser);
             this.accountPanel.Controls.Add(this.richTextBox5);
-            this.accountPanel.Location = new System.Drawing.Point(1059, 9);
+            this.accountPanel.Location = new System.Drawing.Point(1641, 11);
             this.accountPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.accountPanel.Name = "accountPanel";
             this.accountPanel.Size = new System.Drawing.Size(268, 70);
@@ -219,7 +219,7 @@
             // 
             this.reservationButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.reservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reservationButton.Location = new System.Drawing.Point(1059, 786);
+            this.reservationButton.Location = new System.Drawing.Point(1641, 1025);
             this.reservationButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.reservationButton.Name = "reservationButton";
             this.reservationButton.Size = new System.Drawing.Size(221, 44);
@@ -232,7 +232,7 @@
             // 
             this.backButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Location = new System.Drawing.Point(1285, 786);
+            this.backButton.Location = new System.Drawing.Point(1867, 1025);
             this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(42, 44);
@@ -243,10 +243,10 @@
             // flowLayoutPanel
             // 
             this.flowLayoutPanel.AutoScroll = true;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(255, 651);
+            this.flowLayoutPanel.Location = new System.Drawing.Point(255, 830);
             this.flowLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(800, 179);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(1382, 239);
             this.flowLayoutPanel.TabIndex = 6;
             // 
             // richTextBox5
@@ -279,7 +279,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1426, 839);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.flowLayoutPanel);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.reservationButton);
