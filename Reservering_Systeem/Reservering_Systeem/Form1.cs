@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Reservering_Systeem
 {
@@ -19,6 +20,9 @@ namespace Reservering_Systeem
             GetDatabaseData();
         }
 
+        public ProductButton lastbuttonclicked;
+        public string UserID;
+
         private void GetDatabaseData()
         {
             Connection connection = new Connection();
@@ -29,6 +33,28 @@ namespace Reservering_Systeem
             //};
 
             connection.LoadData(flowLayoutPanel/*, action*/);   
+        }
+
+        string connstring = "Server=localhost;Database=reservatie_systeem;Uid=root;SslMode=none";
+        MySqlConnection connObj;
+
+        private void reservationButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connObj = new MySqlConnection(connstring);
+                Debug.WriteLine("Connecting to MySQL...");
+                connObj.Open();
+
+                string sql = "UPDATE producten SET `status` = 1 WHERE `Product_id` = @product_id ";
+                MySqlCommand cmd = new MySqlCommand(sql, connObj);
+                cmd.Parameters.AddWithValue("@product_id", lastbuttonclicked.productId);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

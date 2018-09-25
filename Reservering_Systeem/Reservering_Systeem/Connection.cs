@@ -24,7 +24,7 @@ namespace Reservering_Systeem
                 Debug.WriteLine("Connecting to MySQL...");
                 connObj.Open();
 
-                string sql = "SELECT * FROM `producten`";
+                string sql = "SELECT * FROM `producten` WHERE `status` = 0";
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
                 MySqlDataReader rdr = cmd.ExecuteReader();
 

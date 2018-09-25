@@ -30,7 +30,7 @@ namespace Reservering_Systeem
                 Debug.WriteLine("Connecting to MySQL...");
                 connObj.Open();
 
-                string sql = "SELECT `Leerlingnummer`, `Password` FROM users WHERE `Leerlingnummer` = @username AND `Password` = @password";
+                string sql = "SELECT * FROM users WHERE `Leerlingnummer` = @username AND `Password` = @password";
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
                 cmd.Parameters.AddWithValue("@username", usernameTextbox.Text);
                 cmd.Parameters.AddWithValue("@password", passwordTextbox.Text);
@@ -43,6 +43,8 @@ namespace Reservering_Systeem
                     this.Hide();
                     Form1 frm1 = new Form1();
                     frm1.Show();
+                    frm1.RtbUser.Text = rdr["Naam"].ToString();
+                    frm1.UserID = rdr["User_id"].ToString();
                 }
                 else
                 {

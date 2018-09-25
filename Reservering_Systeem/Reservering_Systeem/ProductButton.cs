@@ -31,6 +31,7 @@ namespace Reservering_Systeem
             frm1.idTextbox.Text = productId;
             frm1.ageTextbox.Text = productAge;
             frm1.pictureBox.Image = ProductImage;
+            frm1.lastbuttonclicked = this;
         }
     }
 }
