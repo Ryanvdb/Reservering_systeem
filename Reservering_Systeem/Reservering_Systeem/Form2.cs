@@ -39,6 +39,10 @@ namespace Reservering_Systeem
                 if (rdr.Read())
                 {
                     invalidTextbox.Visible = false;
+
+                    this.Hide();
+                    Form1 frm1 = new Form1();
+                    frm1.Show();
                 }
                 else
                 {
@@ -55,11 +59,6 @@ namespace Reservering_Systeem
             connObj.Close();
             Debug.WriteLine("Done.");
             
-        }
-
-        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

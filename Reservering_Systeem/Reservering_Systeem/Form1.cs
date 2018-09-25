@@ -15,22 +15,14 @@ namespace Reservering_Systeem
     {
         public Form1()
         {
-            InitializeComponent();          
+            InitializeComponent();
             GetDatabaseData();
-
-            Application.Run(new Form2());
-
         }
 
         private void GetDatabaseData()
         {
             Connection connection = new Connection();
             connection.LoadData(flowLayoutPanel);   
-        }
-
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
