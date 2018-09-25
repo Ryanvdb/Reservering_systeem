@@ -16,7 +16,7 @@ namespace Reservering_Systeem
         string connstring = "Server=localhost;Database=reservatie_systeem;Uid=root;SslMode=none";
         MySqlConnection connObj;
 
-        public void LoadData(FlowLayoutPanel flowLayoutPanel)
+        public void LoadData(FlowLayoutPanel flowLayoutPanel/*, Action action*/)
         {
             try
             {
@@ -30,6 +30,7 @@ namespace Reservering_Systeem
 
                 while (rdr.Read())
                 {
+                    //action();
                     ProductButton addedProduct = new ProductButton();
 
                     addedProduct.productId = rdr["Product_id"].ToString();

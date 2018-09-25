@@ -22,7 +22,13 @@ namespace Reservering_Systeem
         private void GetDatabaseData()
         {
             Connection connection = new Connection();
-            connection.LoadData(flowLayoutPanel);   
+
+            //Action action = () =>
+            //{
+                
+            //};
+
+            connection.LoadData(flowLayoutPanel/*, action*/);   
         }
     }
 }

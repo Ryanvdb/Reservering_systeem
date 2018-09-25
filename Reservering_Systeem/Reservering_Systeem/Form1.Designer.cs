@@ -44,7 +44,6 @@
             this.reservationButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.HIDEBUTTON = new System.Windows.Forms.Button();
             this.specsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -244,23 +243,11 @@
             this.flowLayoutPanel.Size = new System.Drawing.Size(1067, 220);
             this.flowLayoutPanel.TabIndex = 6;
             // 
-            // HIDEBUTTON
-            // 
-            this.HIDEBUTTON.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HIDEBUTTON.Location = new System.Drawing.Point(431, 154);
-            this.HIDEBUTTON.Name = "HIDEBUTTON";
-            this.HIDEBUTTON.Size = new System.Drawing.Size(190, 82);
-            this.HIDEBUTTON.TabIndex = 7;
-            this.HIDEBUTTON.Text = "HIDEBUTTON";
-            this.HIDEBUTTON.UseVisualStyleBackColor = true;
-            this.HIDEBUTTON.Click += new System.EventHandler(this.HIDEBUTTON_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1901, 1033);
-            this.Controls.Add(this.HIDEBUTTON);
             this.Controls.Add(this.flowLayoutPanel);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.reservationButton);
@@ -295,6 +282,5 @@
         public System.Windows.Forms.RichTextBox modelTextbox;
         public System.Windows.Forms.RichTextBox nameTextbox;
         public System.Windows.Forms.PictureBox pictureBox;
-        private System.Windows.Forms.Button HIDEBUTTON;
     }
 }
