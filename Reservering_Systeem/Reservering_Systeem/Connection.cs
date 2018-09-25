@@ -16,7 +16,7 @@ namespace Reservering_Systeem
         string connstring = "Server=localhost;Database=reservatie_systeem;Uid=root;SslMode=none";
         MySqlConnection connObj;
 
-        public void LoadData(FlowLayoutPanel flowLayoutPanel/*, Action action*/)
+        public void LoadProductData(FlowLayoutPanel flowLayoutPanel)
         {
             try
             {
@@ -30,7 +30,6 @@ namespace Reservering_Systeem
 
                 while (rdr.Read())
                 {
-                    //action();
                     ProductButton addedProduct = new ProductButton();
 
                     addedProduct.productId = rdr["Product_id"].ToString();
@@ -43,6 +42,68 @@ namespace Reservering_Systeem
                     flowLayoutPanel.Controls.Add(addedProduct);
                 }
                 rdr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            connObj.Close();
+            Debug.WriteLine("Done.");
+        }
+
+        public void LoadUserData(TextBox usernameTextbox, TextBox passwordTextbox, TextBox invalidTextbox, Form2 frm2)
+        {
+            try
+            {
+                connObj = new MySqlConnection(connstring);
+                Debug.WriteLine("Connecting to MySQL...");
+                connObj.Open();
+
+                string sql = "SELECT * FROM users WHERE `Leerlingnummer` = @username AND `Password` = @password";
+                MySqlCommand cmd = new MySqlCommand(sql, connObj);
+                cmd.Parameters.AddWithValue("@username", usernameTextbox.Text);
+                cmd.Parameters.AddWithValue("@password", passwordTextbox.Text);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+
+                if (rdr.Read())
+                {
+                    invalidTextbox.Visible = false;
+
+                    frm2.Hide();
+                    Form1 frm1 = new Form1();
+                    frm1.Show();
+                    frm1.RtbUser.Text = rdr["Naam"].ToString();
+                    frm1.UserID = rdr["User_id"].ToString();
+                }
+                else
+                {
+                    invalidTextbox.Visible = true;
+                }
+
+                rdr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            connObj.Close();
+            Debug.WriteLine("Done.");
+        }
+
+        public void SetReservationData(ProductButton lastButtonClicked)
+        {
+            try
+            {
+                connObj = new MySqlConnection(connstring);
+                Debug.WriteLine("Connecting to MySQL...");
+                connObj.Open();
+
+                string sql = "UPDATE producten SET `status` = 1 WHERE `Product_id` = @product_id ";
+                MySqlCommand cmd = new MySqlCommand(sql, connObj);
+                cmd.Parameters.AddWithValue("@product_id", lastButtonClicked.productId);
+                MySqlDataReader rdr = cmd.ExecuteReader();
             }
             catch (Exception ex)
             {

@@ -19,48 +19,15 @@ namespace Reservering_Systeem
             InitializeComponent();
         }
 
-        string connstring = "Server=localhost;Database=reservatie_systeem;Uid=root;SslMode=none";
-        MySqlConnection connObj;
-
         private void sumbitLogin_Click(object sender, EventArgs e)
         {
-            try
-            {
-                connObj = new MySqlConnection(connstring);
-                Debug.WriteLine("Connecting to MySQL...");
-                connObj.Open();
+            GetDatabaseData();
+        }
 
-                string sql = "SELECT * FROM users WHERE `Leerlingnummer` = @username AND `Password` = @password";
-                MySqlCommand cmd = new MySqlCommand(sql, connObj);
-                cmd.Parameters.AddWithValue("@username", usernameTextbox.Text);
-                cmd.Parameters.AddWithValue("@password", passwordTextbox.Text);
-                MySqlDataReader rdr = cmd.ExecuteReader();
-
-                if (rdr.Read())
-                {
-                    invalidTextbox.Visible = false;
-
-                    this.Hide();
-                    Form1 frm1 = new Form1();
-                    frm1.Show();
-                    frm1.RtbUser.Text = rdr["Naam"].ToString();
-                    frm1.UserID = rdr["User_id"].ToString();
-                }
-                else
-                {
-                    invalidTextbox.Visible = true;
-                }
-
-                rdr.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-
-            connObj.Close();
-            Debug.WriteLine("Done.");
-            
+        private void GetDatabaseData()
+        {
+            Connection connection = new Connection();
+            connection.LoadUserData(usernameTextbox, passwordTextbox, invalidTextbox, this);
         }
     }
 }
