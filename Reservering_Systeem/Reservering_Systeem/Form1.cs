@@ -21,11 +21,14 @@ namespace Reservering_Systeem
             InitializeComponent();
 
             connection.LoadProductData(flowLayoutPanel);
+
+            connection.LoadReservationData(reservatiePanel);
         }
 
         private void reservationButton_Click(object sender, EventArgs e)
         {
-            connection.SetReservationData(Variables.lastButtonClicked);
+            connection.SetReservation();
+            connection.LoadProductData(flowLayoutPanel);
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

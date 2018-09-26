@@ -12,17 +12,9 @@ namespace Reservering_Systeem
 {
     public partial class ReservatiePanel : UserControl
     {
-        public string naam;
-        public string ProductModel;
         public ReservatiePanel()
         {
             InitializeComponent();
-        }
-
-        public void LoadData() 
-        {
-            TBnaam.Text = naam;
-            TBmodel.Text = ProductModel;
         }
     }
 }

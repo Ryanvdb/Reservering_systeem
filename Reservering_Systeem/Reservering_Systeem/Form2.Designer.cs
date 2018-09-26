@@ -49,10 +49,10 @@
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.passwordTextbox);
             this.panel1.Controls.Add(this.usernameTextbox);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(598, 364);
+            this.panel1.Size = new System.Drawing.Size(797, 448);
             this.panel1.TabIndex = 0;
             // 
             // invalidTextbox
@@ -61,10 +61,10 @@
             this.invalidTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.invalidTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.invalidTextbox.ForeColor = System.Drawing.Color.Red;
-            this.invalidTextbox.Location = new System.Drawing.Point(206, 96);
-            this.invalidTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.invalidTextbox.Location = new System.Drawing.Point(275, 118);
+            this.invalidTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.invalidTextbox.Name = "invalidTextbox";
-            this.invalidTextbox.Size = new System.Drawing.Size(182, 14);
+            this.invalidTextbox.Size = new System.Drawing.Size(243, 17);
             this.invalidTextbox.TabIndex = 4;
             this.invalidTextbox.Text = "Username or password invalid";
             this.invalidTextbox.Visible = false;
@@ -72,10 +72,10 @@
             // sumbitLogin
             // 
             this.sumbitLogin.BackColor = System.Drawing.SystemColors.Window;
-            this.sumbitLogin.Location = new System.Drawing.Point(308, 189);
-            this.sumbitLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sumbitLogin.Location = new System.Drawing.Point(411, 233);
+            this.sumbitLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sumbitLogin.Name = "sumbitLogin";
-            this.sumbitLogin.Size = new System.Drawing.Size(78, 20);
+            this.sumbitLogin.Size = new System.Drawing.Size(104, 28);
             this.sumbitLogin.TabIndex = 0;
             this.sumbitLogin.Text = "Login";
             this.sumbitLogin.UseVisualStyleBackColor = false;
@@ -86,10 +86,10 @@
             this.textBox4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(193, 153);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Location = new System.Drawing.Point(257, 188);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(85, 17);
+            this.textBox4.Size = new System.Drawing.Size(113, 21);
             this.textBox4.TabIndex = 3;
             this.textBox4.TabStop = false;
             this.textBox4.Text = "Password :";
@@ -99,29 +99,29 @@
             this.textBox3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(193, 120);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Location = new System.Drawing.Point(257, 148);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(85, 17);
+            this.textBox3.Size = new System.Drawing.Size(113, 21);
             this.textBox3.TabIndex = 2;
             this.textBox3.TabStop = false;
             this.textBox3.Text = "Username :";
             // 
             // passwordTextbox
             // 
-            this.passwordTextbox.Location = new System.Drawing.Point(282, 153);
-            this.passwordTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passwordTextbox.Location = new System.Drawing.Point(376, 188);
+            this.passwordTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.passwordTextbox.Name = "passwordTextbox";
-            this.passwordTextbox.Size = new System.Drawing.Size(106, 20);
+            this.passwordTextbox.Size = new System.Drawing.Size(140, 22);
             this.passwordTextbox.TabIndex = 1;
             // 
             // usernameTextbox
             // 
             this.usernameTextbox.BackColor = System.Drawing.SystemColors.Window;
-            this.usernameTextbox.Location = new System.Drawing.Point(282, 121);
-            this.usernameTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.usernameTextbox.Location = new System.Drawing.Point(376, 149);
+            this.usernameTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usernameTextbox.Name = "usernameTextbox";
-            this.usernameTextbox.Size = new System.Drawing.Size(106, 20);
+            this.usernameTextbox.Size = new System.Drawing.Size(140, 22);
             this.usernameTextbox.TabIndex = 0;
             // 
             // richTextBox1
@@ -139,11 +139,11 @@
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

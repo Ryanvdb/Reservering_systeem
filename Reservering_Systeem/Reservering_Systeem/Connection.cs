@@ -73,10 +73,10 @@ namespace Reservering_Systeem
                     frm2.Hide();
                     Form1 frm1 = new Form1();
                     frm1.Show();
-                    frm1.RtbUser.Text = rdr["Naam"].ToString();
-                    Variables.UserID = rdr["User_id"].ToString();
+
+                    Variables.userID = Convert.ToByte(rdr["User_id"]);
                     Variables.admin = Convert.ToByte(rdr["Admin"]);
-                    int User = Convert.ToByte(Variables.UserID);
+                    frm1.RtbUser.Text = rdr["Naam"].ToString();
 
                     if (Variables.admin == 1)
                     {
@@ -102,7 +102,41 @@ namespace Reservering_Systeem
             Debug.WriteLine("Done.");
         }
 
-        public void SetReservationData(ProductButton lastButtonClicked)
+        public void LoadReservationData(FlowLayoutPanel reservatiePanel)
+        {
+            try
+            {
+                connObj.ConnectionString = connstring;
+                Debug.WriteLine("Connecting to MySQL...");
+                connObj.Open();
+
+                string sql = "SELECT reservaties.Datum, producten.Model, producten.Naam FROM reservaties INNER JOIN producten ON reservaties.Product_id = producten.Product_id WHERE reservaties.User_id = 2";
+                MySqlCommand cmd = new MySqlCommand(sql, connObj);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+
+                cmd.Parameters.AddWithValue("@userId", Variables.userID);
+
+                while (rdr.Read())
+                {
+                    ReservatiePanel addedPanel = new ReservatiePanel();
+
+                    addedPanel.TBnaam.Text = rdr["Naam"].ToString();
+                    addedPanel.TBmodel.Text= rdr["Model"].ToString();
+                    addedPanel.TBinleverdatum.Text= rdr["Datum"].ToString();
+
+                    reservatiePanel.Controls.Add(addedPanel);
+
+                    //MessageBox.Show(addedPanel.TBnaam.Text + addedPanel.TBmodel.Text + addedPanel.TBinleverdatum.Text);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            connObj.Close();
+        }
+
+        public void SetReservation()
         {
             try
             {
@@ -112,9 +146,10 @@ namespace Reservering_Systeem
 
                 string sql = "UPDATE producten SET `status` = 1 WHERE `Product_id` = @product_id";
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
+                
+                cmd.Parameters.AddWithValue("@user_id", Variables.userID);
+                cmd.Parameters.AddWithValue("@product_id", Convert.ToByte(Variables.lastButtonClicked.productId));
 
-                cmd.Parameters.AddWithValue("@user_id", Variables.UserID);
-                cmd.Parameters.AddWithValue("@product_id", lastButtonClicked.productId);
                 MySqlDataReader rdr = cmd.ExecuteReader();
             }
             catch (Exception ex)
@@ -132,9 +167,9 @@ namespace Reservering_Systeem
 
                 string sql = "INSERT INTO `reservaties`(`User_id`, `Product_id`) VALUES (@user_id,@product_id)";
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
-
-                cmd.Parameters.AddWithValue("@user_id", Variables.UserID);
-                cmd.Parameters.AddWithValue("@product_id", lastButtonClicked.productId);
+                
+                cmd.Parameters.AddWithValue("@user_id", Variables.userID);
+                cmd.Parameters.AddWithValue("@product_id", Convert.ToByte(Variables.lastButtonClicked.productId));
                 MySqlDataReader rdr = cmd.ExecuteReader();
             }
             catch (Exception ex)
@@ -143,35 +178,6 @@ namespace Reservering_Systeem
             }
             connObj.Close();
 
-            try
-            {
-                connObj.ConnectionString = connstring;
-                Debug.WriteLine("Connecting to MySQL...");
-                connObj.Open();
-
-                string sql = "SELECT * FROM producten WHERE `Product_id` = @productId ";
-                MySqlCommand cmd = new MySqlCommand(sql, connObj);
-                MySqlDataReader rdr = cmd.ExecuteReader();
-
-                cmd.Parameters.AddWithValue("@productId", .productId);
-                while (rdr.Read())
-                {
-                    ReservatiePanel addedProduct = new ReservatiePanel();
-
-                    addedProduct.productId = rdr["Product_id"].ToString();
-                    addedProduct.productName = rdr[]
-                    addedProduct.modelName = rdr["Model"].ToString();
-
-                    addedProduct.button.Text = addedProduct.modelName;
-                    ReservatiePanel.Controls.Add(addedProduct);
-                }
-                ReservatiePanel.ProductModel = rdr["model"].ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            connObj.Close();
         }
 
         private Image img(byte[] b)
