@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.specsPanel = new System.Windows.Forms.Panel();
+            this.MeldingPanel = new System.Windows.Forms.Panel();
             this.ageTextbox = new System.Windows.Forms.RichTextBox();
             this.idTextbox = new System.Windows.Forms.RichTextBox();
             this.modelTextbox = new System.Windows.Forms.RichTextBox();
@@ -49,7 +50,6 @@
             this.ExitPanel = new System.Windows.Forms.Panel();
             this.ExitButton = new System.Windows.Forms.Button();
             this.EditPanel = new System.Windows.Forms.Panel();
-            this.MeldingPanel = new System.Windows.Forms.Panel();
             this.specsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.accountPanel.SuspendLayout();
@@ -73,7 +73,16 @@
             this.specsPanel.Name = "specsPanel";
             this.specsPanel.Size = new System.Drawing.Size(268, 667);
             this.specsPanel.TabIndex = 1;
-            this.specsPanel.Visible = false;
+            // 
+            // MeldingPanel
+            // 
+            this.MeldingPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MeldingPanel.Location = new System.Drawing.Point(2, 2);
+            this.MeldingPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.MeldingPanel.Name = "MeldingPanel";
+            this.MeldingPanel.Size = new System.Drawing.Size(268, 667);
+            this.MeldingPanel.TabIndex = 8;
+            this.MeldingPanel.Visible = false;
             // 
             // ageTextbox
             // 
@@ -192,7 +201,6 @@
             this.pictureBox.Size = new System.Drawing.Size(1380, 741);
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
-            this.pictureBox.Visible = false;
             // 
             // productPanel
             // 
@@ -282,7 +290,6 @@
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Size = new System.Drawing.Size(1382, 239);
             this.flowLayoutPanel.TabIndex = 6;
-            this.flowLayoutPanel.Visible = false;
             // 
             // ExitPanel
             // 
@@ -312,16 +319,7 @@
             this.EditPanel.Name = "EditPanel";
             this.EditPanel.Size = new System.Drawing.Size(1379, 740);
             this.EditPanel.TabIndex = 8;
-            // 
-            // MeldingPanel
-            // 
-            this.MeldingPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MeldingPanel.Location = new System.Drawing.Point(2, 2);
-            this.MeldingPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.MeldingPanel.Name = "MeldingPanel";
-            this.MeldingPanel.Size = new System.Drawing.Size(268, 667);
-            this.MeldingPanel.TabIndex = 8;
-            this.MeldingPanel.Visible = false;
+            this.EditPanel.Visible = false;
             // 
             // Form1
             // 
@@ -354,7 +352,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel specsPanel;
         private System.Windows.Forms.Panel productPanel;
         private System.Windows.Forms.Panel bannerPanel;
         private System.Windows.Forms.Panel accountPanel;
@@ -374,7 +371,8 @@
         public System.Windows.Forms.RichTextBox RtbUser;
         private System.Windows.Forms.Panel ExitPanel;
         public System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.Panel EditPanel;
-        private System.Windows.Forms.Panel MeldingPanel;
+        public System.Windows.Forms.Panel specsPanel;
+        public System.Windows.Forms.Panel EditPanel;
+        public System.Windows.Forms.Panel MeldingPanel;
     }
 }

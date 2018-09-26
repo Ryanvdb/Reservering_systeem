@@ -18,6 +18,7 @@ namespace Reservering_Systeem
 
         public ProductButton lastButtonClicked;
         public string UserID;
+        public int admin;
 
         public Form1()
         {

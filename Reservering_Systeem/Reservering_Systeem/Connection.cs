@@ -75,6 +75,14 @@ namespace Reservering_Systeem
                     frm1.Show();
                     frm1.RtbUser.Text = rdr["Naam"].ToString();
                     frm1.UserID = rdr["User_id"].ToString();
+                    frm1.admin = Convert.ToByte(rdr["Admin"]);
+                    if (frm1.admin == 1)
+                    {
+                        frm1.pictureBox.Hide();
+                        frm1.specsPanel.Hide();
+                        frm1.EditPanel.Show();
+                        frm1.MeldingPanel.Show();
+                    }
                 }
                 else
                 {
