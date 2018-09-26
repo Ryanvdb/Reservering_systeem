@@ -86,11 +86,12 @@
             this.textBox4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(205, 152);
+            this.textBox4.Location = new System.Drawing.Point(193, 153);
             this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(72, 17);
+            this.textBox4.Size = new System.Drawing.Size(85, 17);
             this.textBox4.TabIndex = 3;
+            this.textBox4.TabStop = false;
             this.textBox4.Text = "Password :";
             // 
             // textBox3
@@ -98,11 +99,12 @@
             this.textBox3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(205, 119);
+            this.textBox3.Location = new System.Drawing.Point(193, 120);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(72, 17);
+            this.textBox3.Size = new System.Drawing.Size(85, 17);
             this.textBox3.TabIndex = 2;
+            this.textBox3.TabStop = false;
             this.textBox3.Text = "Username :";
             // 
             // passwordTextbox
