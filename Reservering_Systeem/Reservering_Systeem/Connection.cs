@@ -110,8 +110,7 @@ namespace Reservering_Systeem
                 Debug.WriteLine("Connecting to MySQL...");
                 connObj.Open();
 
-                //string sql = "UPDATE producten SET `status` = 1 WHERE `Product_id` = @product_id";
-                string sql = "INSERT INTO `reservaties`(`User_id`, `Product_id`) VALUES (@user_id,@product_id)";
+                string sql = "UPDATE producten SET `status` = 1 WHERE `Product_id` = @product_id";
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
                 MessageBox.Show(Variables.UserID);
 
@@ -123,9 +122,27 @@ namespace Reservering_Systeem
             {
                 MessageBox.Show(ex.ToString());
             }
-
             connObj.Close();
             Debug.WriteLine("Done.");
+
+            try
+            {
+                connObj.ConnectionString = connstring;
+                Debug.WriteLine("Connecting to MySQL...");
+                connObj.Open();
+
+                string sql = "INSERT INTO `reservaties`(`User_id`, `Product_id`) VALUES (@user_id,@product_id)";
+                MySqlCommand cmd = new MySqlCommand(sql, connObj);
+                MessageBox.Show(Variables.UserID);
+
+                cmd.Parameters.AddWithValue("@user_id", Variables.UserID);
+                cmd.Parameters.AddWithValue("@product_id", lastButtonClicked.productId);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            connObj.Close();
         }
 
         private Image img(byte[] b)
