@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "ReservatiePanel";
-            this.Size = new System.Drawing.Size(382, 53);
+            this.Size = new System.Drawing.Size(392, 53);
             this.ResumeLayout(false);
 
         }

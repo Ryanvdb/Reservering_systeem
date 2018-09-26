@@ -67,11 +67,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReservationButton.cs">
+    <Compile Include="ReservatiePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ReservationButton.Designer.cs">
-      <DependentUpon>ReservationButton.cs</DependentUpon>
+    <Compile Include="ReservatiePanel.Designer.cs">
+      <DependentUpon>ReservatiePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Variables.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -92,8 +92,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ReservationButton.resx">
-      <DependentUpon>ReservationButton.cs</DependentUpon>
+    <EmbeddedResource Include="ReservatiePanel.resx">
+      <DependentUpon>ReservatiePanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
