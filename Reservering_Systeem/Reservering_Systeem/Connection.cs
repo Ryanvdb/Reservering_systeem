@@ -75,9 +75,9 @@ namespace Reservering_Systeem
                     frm1.Show();
                     frm1.RtbUser.Text = rdr["Naam"].ToString();
                     Variables.UserID = rdr["User_id"].ToString();
-                    int User = Convert.ToByte(Variables.UserID);
                     Variables.admin = Convert.ToByte(rdr["Admin"]);
-                    MessageBox.Show(Variables.UserID);
+                    int User = Convert.ToByte(Variables.UserID);
+
                     if (Variables.admin == 1)
                     {
                         frm1.pictureBox.Hide();
@@ -112,7 +112,6 @@ namespace Reservering_Systeem
 
                 string sql = "UPDATE producten SET `status` = 1 WHERE `Product_id` = @product_id";
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
-                MessageBox.Show(Variables.UserID);
 
                 cmd.Parameters.AddWithValue("@user_id", Variables.UserID);
                 cmd.Parameters.AddWithValue("@product_id", lastButtonClicked.productId);
@@ -133,12 +132,42 @@ namespace Reservering_Systeem
 
                 string sql = "INSERT INTO `reservaties`(`User_id`, `Product_id`) VALUES (@user_id,@product_id)";
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
-                MessageBox.Show(Variables.UserID);
 
                 cmd.Parameters.AddWithValue("@user_id", Variables.UserID);
                 cmd.Parameters.AddWithValue("@product_id", lastButtonClicked.productId);
                 MySqlDataReader rdr = cmd.ExecuteReader();
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            connObj.Close();
+
+            try
+            {
+                connObj.ConnectionString = connstring;
+                Debug.WriteLine("Connecting to MySQL...");
+                connObj.Open();
+
+                string sql = "SELECT * FROM producten WHERE `Product_id` = @productId ";
+                MySqlCommand cmd = new MySqlCommand(sql, connObj);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+
+                cmd.Parameters.AddWithValue("@productId", .productId);
+                while (rdr.Read())
+                {
+                    ReservatiePanel addedProduct = new ReservatiePanel();
+
+                    addedProduct.productId = rdr["Product_id"].ToString();
+                    addedProduct.productName = rdr[]
+                    addedProduct.modelName = rdr["Model"].ToString();
+
+                    addedProduct.button.Text = addedProduct.modelName;
+                    ReservatiePanel.Controls.Add(addedProduct);
+                }
+                ReservatiePanel.ProductModel = rdr["model"].ToString();
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }

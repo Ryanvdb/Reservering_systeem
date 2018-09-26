@@ -50,7 +50,7 @@
             this.ExitPanel = new System.Windows.Forms.Panel();
             this.ExitButton = new System.Windows.Forms.Button();
             this.EditPanel = new System.Windows.Forms.Panel();
-            this.ReservatiePanel = new System.Windows.Forms.Panel();
+            this.reservatiePanel = new System.Windows.Forms.FlowLayoutPanel();
             this.specsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.accountPanel.SuspendLayout();
@@ -60,9 +60,8 @@
             // specsPanel
             // 
             this.specsPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.specsPanel.Controls.Add(this.ReservatiePanel);
-            this.specsPanel.Controls.Add(this.MeldingPanel);
             this.specsPanel.Controls.Add(this.ageTextbox);
+            this.specsPanel.Controls.Add(this.MeldingPanel);
             this.specsPanel.Controls.Add(this.idTextbox);
             this.specsPanel.Controls.Add(this.modelTextbox);
             this.specsPanel.Controls.Add(this.nameTextbox);
@@ -79,7 +78,7 @@
             // MeldingPanel
             // 
             this.MeldingPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MeldingPanel.Location = new System.Drawing.Point(2, 2);
+            this.MeldingPanel.Location = new System.Drawing.Point(0, 0);
             this.MeldingPanel.Margin = new System.Windows.Forms.Padding(2);
             this.MeldingPanel.Name = "MeldingPanel";
             this.MeldingPanel.Size = new System.Drawing.Size(268, 667);
@@ -323,14 +322,12 @@
             this.EditPanel.TabIndex = 8;
             this.EditPanel.Visible = false;
             // 
-            // ReservatiePanel
+            // reservatiePanel
             // 
-            this.ReservatiePanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ReservatiePanel.Location = new System.Drawing.Point(0, 2);
-            this.ReservatiePanel.Margin = new System.Windows.Forms.Padding(2);
-            this.ReservatiePanel.Name = "ReservatiePanel";
-            this.ReservatiePanel.Size = new System.Drawing.Size(268, 667);
-            this.ReservatiePanel.TabIndex = 9;
+            this.reservatiePanel.Location = new System.Drawing.Point(1642, 159);
+            this.reservatiePanel.Name = "reservatiePanel";
+            this.reservatiePanel.Size = new System.Drawing.Size(269, 667);
+            this.reservatiePanel.TabIndex = 0;
             // 
             // Form1
             // 
@@ -338,6 +335,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.reservatiePanel);
             this.Controls.Add(this.EditPanel);
             this.Controls.Add(this.ExitPanel);
             this.Controls.Add(this.flowLayoutPanel);
@@ -385,6 +383,6 @@
         public System.Windows.Forms.Panel specsPanel;
         public System.Windows.Forms.Panel EditPanel;
         public System.Windows.Forms.Panel MeldingPanel;
-        public System.Windows.Forms.Panel ReservatiePanel;
+        public System.Windows.Forms.FlowLayoutPanel reservatiePanel;
     }
 }
