@@ -14,13 +14,13 @@ namespace Reservering_Systeem
     class Connection
     {
         string connstring = "Server=localhost;Database=reservatie_systeem;Uid=root;SslMode=none";
-        MySqlConnection connObj;
+        MySqlConnection connObj = new MySqlConnection();
 
         public void LoadProductData(FlowLayoutPanel flowLayoutPanel)
         {
             try
             {
-                connObj = new MySqlConnection(connstring);
+                connObj.ConnectionString = connstring;
                 Debug.WriteLine("Connecting to MySQL...");
                 connObj.Open();
 
@@ -56,7 +56,7 @@ namespace Reservering_Systeem
         {
             try
             {
-                connObj = new MySqlConnection(connstring);
+                connObj.ConnectionString = connstring;
                 Debug.WriteLine("Connecting to MySQL...");
                 connObj.Open();
 
@@ -96,12 +96,13 @@ namespace Reservering_Systeem
         {
             try
             {
-                connObj = new MySqlConnection(connstring);
+                connObj.ConnectionString = connstring;
                 Debug.WriteLine("Connecting to MySQL...");
                 connObj.Open();
 
                 string sql = "UPDATE producten SET `status` = 1 WHERE `Product_id` = @product_id ";
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
+
                 cmd.Parameters.AddWithValue("@product_id", lastButtonClicked.productId);
                 MySqlDataReader rdr = cmd.ExecuteReader();
             }
