@@ -74,9 +74,11 @@ namespace Reservering_Systeem
                     Form1 frm1 = new Form1();
                     frm1.Show();
                     frm1.RtbUser.Text = rdr["Naam"].ToString();
-                    frm1.UserID = rdr["User_id"].ToString();
-                    frm1.admin = Convert.ToByte(rdr["Admin"]);
-                    if (frm1.admin == 1)
+                    Variables.UserID = rdr["User_id"].ToString();
+                    int User = Convert.ToByte(Variables.UserID);
+                    Variables.admin = Convert.ToByte(rdr["Admin"]);
+                    MessageBox.Show(Variables.UserID);
+                    if (Variables.admin == 1)
                     {
                         frm1.pictureBox.Hide();
                         frm1.specsPanel.Hide();
@@ -102,15 +104,17 @@ namespace Reservering_Systeem
 
         public void SetReservationData(ProductButton lastButtonClicked)
         {
+            Form1 frm1 = new Form1();
             try
             {
                 connObj.ConnectionString = connstring;
                 Debug.WriteLine("Connecting to MySQL...");
                 connObj.Open();
-
-                string sql = "UPDATE producten SET `status` = 1 WHERE `Product_id` = @product_id ";
+                //string sql = "UPDATE producten SET `status` = 1 WHERE `Product_id` = @product_id";
+                string sql = "INSERT INTO `reservaties`(`User_id`, `Product_id`) VALUES (@user_id,@product_id)";
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
-
+                MessageBox.Show(Variables.UserID);
+                cmd.Parameters.AddWithValue("@user_id", Variables.UserID);
                 cmd.Parameters.AddWithValue("@product_id", lastButtonClicked.productId);
                 MySqlDataReader rdr = cmd.ExecuteReader();
             }
@@ -118,7 +122,6 @@ namespace Reservering_Systeem
             {
                 MessageBox.Show(ex.ToString());
             }
-
             connObj.Close();
             Debug.WriteLine("Done.");
         }

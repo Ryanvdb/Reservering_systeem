@@ -16,10 +16,6 @@ namespace Reservering_Systeem
     {
         Connection connection = new Connection();
 
-        public ProductButton lastButtonClicked;
-        public string UserID;
-        public int admin;
-
         public Form1()
         {
             InitializeComponent();
@@ -29,7 +25,7 @@ namespace Reservering_Systeem
 
         private void reservationButton_Click(object sender, EventArgs e)
         {
-            connection.SetReservationData(lastButtonClicked);
+            connection.SetReservationData(Variables.lastButtonClicked);
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
