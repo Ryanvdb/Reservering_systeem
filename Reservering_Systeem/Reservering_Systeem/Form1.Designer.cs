@@ -46,9 +46,12 @@
             this.reservationButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.ExitPanel = new System.Windows.Forms.Panel();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.specsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.accountPanel.SuspendLayout();
+            this.ExitPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // specsPanel
@@ -62,10 +65,10 @@
             this.specsPanel.Controls.Add(this.richTextBox3);
             this.specsPanel.Controls.Add(this.richTextBox2);
             this.specsPanel.Controls.Add(this.richTextBox1);
-            this.specsPanel.Location = new System.Drawing.Point(1641, 85);
+            this.specsPanel.Location = new System.Drawing.Point(1643, 159);
             this.specsPanel.Margin = new System.Windows.Forms.Padding(2);
             this.specsPanel.Name = "specsPanel";
-            this.specsPanel.Size = new System.Drawing.Size(268, 563);
+            this.specsPanel.Size = new System.Drawing.Size(268, 667);
             this.specsPanel.TabIndex = 1;
             // 
             // ageTextbox
@@ -209,7 +212,7 @@
             this.accountPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.accountPanel.Controls.Add(this.RtbUser);
             this.accountPanel.Controls.Add(this.richTextBox5);
-            this.accountPanel.Location = new System.Drawing.Point(1641, 11);
+            this.accountPanel.Location = new System.Drawing.Point(1643, 85);
             this.accountPanel.Margin = new System.Windows.Forms.Padding(2);
             this.accountPanel.Name = "accountPanel";
             this.accountPanel.Size = new System.Drawing.Size(268, 70);
@@ -275,12 +278,35 @@
             this.flowLayoutPanel.Size = new System.Drawing.Size(1382, 239);
             this.flowLayoutPanel.TabIndex = 6;
             // 
+            // ExitPanel
+            // 
+            this.ExitPanel.Controls.Add(this.ExitButton);
+            this.ExitPanel.Location = new System.Drawing.Point(1645, 12);
+            this.ExitPanel.Name = "ExitPanel";
+            this.ExitPanel.Size = new System.Drawing.Size(266, 69);
+            this.ExitPanel.TabIndex = 7;
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ExitButton.BackColor = System.Drawing.Color.Firebrick;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.Location = new System.Drawing.Point(133, 3);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(130, 63);
+            this.ExitButton.TabIndex = 0;
+            this.ExitButton.Text = "X";
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.ExitPanel);
             this.Controls.Add(this.flowLayoutPanel);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.reservationButton);
@@ -298,6 +324,7 @@
             this.specsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.accountPanel.ResumeLayout(false);
+            this.ExitPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -321,5 +348,7 @@
         public System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.RichTextBox richTextBox5;
         public System.Windows.Forms.RichTextBox RtbUser;
+        private System.Windows.Forms.Panel ExitPanel;
+        public System.Windows.Forms.Button ExitButton;
     }
 }

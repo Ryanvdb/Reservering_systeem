@@ -30,5 +30,10 @@ namespace Reservering_Systeem
         {
             connection.SetReservationData(lastButtonClicked);
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
