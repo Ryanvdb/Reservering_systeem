@@ -1,6 +1,6 @@
 ﻿namespace Reservering_Systeem
 {
-    partial class ReservationButton
+    partial class ReservatiePanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // ReservationButton
+            // ReservatiePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "ReservationButton";
-            this.Size = new System.Drawing.Size(502, 58);
+            this.Name = "ReservatiePanel";
+            this.Size = new System.Drawing.Size(382, 53);
             this.ResumeLayout(false);
 
         }
