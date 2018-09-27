@@ -89,7 +89,7 @@ namespace Reservering_Systeem
                         Variables.frm1.pictureBox.Hide();
                         Variables.frm1.specsPanel.Hide();
                         Variables.frm1.EditPanel.Show();
-                        Variables.frm1.MeldingPanel.Show();
+                        Variables.frm1.MeldingenPanel.Show();
                     }
                 }
                 else
@@ -178,9 +178,10 @@ namespace Reservering_Systeem
 
                 string sql = "INSERT INTO `reservaties`(`User_id`, `Product_id`) VALUES (@user_id,@product_id)";
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
-                
+
                 cmd.Parameters.AddWithValue("@user_id", Variables.userID);
                 cmd.Parameters.AddWithValue("@product_id", Convert.ToByte(Variables.lastButtonClicked.productId));
+
                 MySqlDataReader rdr = cmd.ExecuteReader();
             }
             catch (Exception ex)
@@ -189,6 +190,37 @@ namespace Reservering_Systeem
             }
             connObj.Close();
 
+        }
+
+        public void LoadMeldingData()
+        {
+            try
+            {
+                connObj.ConnectionString = connstring;
+                Debug.WriteLine("Connecting to MySQL...");
+                connObj.Open();
+
+                string sql = "SELECT * FROM `reservaties`";
+
+                MySqlCommand cmd = new MySqlCommand(sql, connObj);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    MeldingPanel addedPanel = new MeldingPanel();
+
+                    addedPanel.TB_ReserveringID.Text = rdr["Reservaties_ID"].ToString();
+                    //addedPanel.TB_Status.Text = rdr[""].ToString();
+                    addedPanel.TB_InleveringDatum.Text = rdr["Datum"].ToString();
+
+                    Variables.frm1.reservatiePanel.Controls.Add(addedPanel);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            connObj.Close();
         }
 
         private Image img(byte[] b)

@@ -19,6 +19,10 @@ namespace Reservering_Systeem
         public Form1()
         {
             InitializeComponent();
+            if (Variables.admin == 1)
+            {
+                connection.LoadMeldingData();
+            }
         }
 
         private void reservationButton_Click(object sender, EventArgs e)

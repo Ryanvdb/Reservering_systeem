@@ -59,6 +59,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="MeldingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MeldingPanel.Designer.cs">
+      <DependentUpon>MeldingPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeldingPanel.resx">
+      <DependentUpon>MeldingPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductButton.resx">
       <DependentUpon>ProductButton.cs</DependentUpon>
