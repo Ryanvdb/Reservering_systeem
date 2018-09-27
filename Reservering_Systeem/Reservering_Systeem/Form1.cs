@@ -19,16 +19,12 @@ namespace Reservering_Systeem
         public Form1()
         {
             InitializeComponent();
-
-            connection.LoadProductData(flowLayoutPanel);
-
-            connection.LoadReservationData(reservatiePanel);
         }
 
         private void reservationButton_Click(object sender, EventArgs e)
         {
             connection.SetReservation();
-            connection.LoadProductData(flowLayoutPanel);
+            //connection.LoadProductData(flowLayoutPanel);
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

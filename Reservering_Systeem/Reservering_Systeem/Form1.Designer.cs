@@ -30,7 +30,6 @@
         {
             this.specsPanel = new System.Windows.Forms.Panel();
             this.ageTextbox = new System.Windows.Forms.RichTextBox();
-            this.MeldingPanel = new System.Windows.Forms.Panel();
             this.idTextbox = new System.Windows.Forms.RichTextBox();
             this.modelTextbox = new System.Windows.Forms.RichTextBox();
             this.nameTextbox = new System.Windows.Forms.RichTextBox();
@@ -38,6 +37,7 @@
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.MeldingPanel = new System.Windows.Forms.Panel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.productPanel = new System.Windows.Forms.Panel();
             this.bannerPanel = new System.Windows.Forms.Panel();
@@ -89,17 +89,6 @@
             this.ageTextbox.Size = new System.Drawing.Size(137, 30);
             this.ageTextbox.TabIndex = 7;
             this.ageTextbox.Text = "";
-            // 
-            // MeldingPanel
-            // 
-            this.MeldingPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MeldingPanel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.MeldingPanel.Location = new System.Drawing.Point(1178, 198);
-            this.MeldingPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MeldingPanel.Name = "MeldingPanel";
-            this.MeldingPanel.Size = new System.Drawing.Size(294, 533);
-            this.MeldingPanel.TabIndex = 8;
-            this.MeldingPanel.Visible = false;
             // 
             // idTextbox
             // 
@@ -194,6 +183,17 @@
             this.richTextBox1.Size = new System.Drawing.Size(142, 30);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "Product Name";
+            // 
+            // MeldingPanel
+            // 
+            this.MeldingPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MeldingPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MeldingPanel.Location = new System.Drawing.Point(1178, 198);
+            this.MeldingPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MeldingPanel.Name = "MeldingPanel";
+            this.MeldingPanel.Size = new System.Drawing.Size(294, 533);
+            this.MeldingPanel.TabIndex = 8;
+            this.MeldingPanel.Visible = false;
             // 
             // pictureBox
             // 
@@ -377,7 +377,6 @@
         private System.Windows.Forms.Panel accountPanel;
         private System.Windows.Forms.Button reservationButton;
         private System.Windows.Forms.Button backButton;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         private System.Windows.Forms.RichTextBox richTextBox4;
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.RichTextBox richTextBox2;
@@ -395,5 +394,6 @@
         public System.Windows.Forms.Panel EditPanel;
         public System.Windows.Forms.Panel MeldingPanel;
         public System.Windows.Forms.FlowLayoutPanel reservatiePanel;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
     }
 }

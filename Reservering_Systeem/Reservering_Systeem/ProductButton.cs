@@ -25,12 +25,11 @@ namespace Reservering_Systeem
 
         private void button_MouseClick(object sender, MouseEventArgs e)
         {
-            Form1 frm1 = (Form1)Application.OpenForms["Form1"];
-            frm1.nameTextbox.Text = productName;
-            frm1.modelTextbox.Text = modelName;
-            frm1.idTextbox.Text = productId;
-            frm1.ageTextbox.Text = productAge;
-            frm1.pictureBox.Image = ProductImage;
+            Variables.frm1.nameTextbox.Text = productName;
+            Variables.frm1.modelTextbox.Text = modelName;
+            Variables.frm1.idTextbox.Text = productId;
+            Variables.frm1.ageTextbox.Text = productAge;
+            Variables.frm1.pictureBox.Image = ProductImage;
             Variables.lastButtonClicked = this;
         }
     }

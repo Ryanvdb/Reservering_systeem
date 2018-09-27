@@ -12,11 +12,11 @@ using System.IO;
 namespace Reservering_Systeem
 {
     class Connection
-    {
+    {        
         string connstring = "Server=localhost;Database=reservatie_systeem;Uid=root;SslMode=none";
         MySqlConnection connObj = new MySqlConnection();
 
-        public void LoadProductData(FlowLayoutPanel flowLayoutPanel)
+        public void LoadProductData()
         {
             try
             {
@@ -39,7 +39,7 @@ namespace Reservering_Systeem
                     addedProduct.ProductImage = img((byte[])rdr["ProductImage"]);
 
                     addedProduct.button.Text = addedProduct.modelName;
-                    flowLayoutPanel.Controls.Add(addedProduct);
+                    Variables.frm1.flowLayoutPanel.Controls.Add(addedProduct);
                 }
                 rdr.Close();
             }
@@ -52,8 +52,10 @@ namespace Reservering_Systeem
             Debug.WriteLine("Done.");
         }
 
-        public void LoadUserData(TextBox usernameTextbox, TextBox passwordTextbox, TextBox invalidTextbox, Form2 frm2)
+        public void LoadUserData()
         {
+            bool check = false;
+
             try
             {
                 connObj.ConnectionString = connstring;
@@ -62,33 +64,37 @@ namespace Reservering_Systeem
 
                 string sql = "SELECT * FROM users WHERE `Leerlingnummer` = @username AND `Password` = @password";
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
-                cmd.Parameters.AddWithValue("@username", usernameTextbox.Text);
-                cmd.Parameters.AddWithValue("@password", passwordTextbox.Text);
+                cmd.Parameters.AddWithValue("@username", Variables.frm2.usernameTextbox.Text);
+                cmd.Parameters.AddWithValue("@password", Variables.frm2.passwordTextbox.Text);
                 MySqlDataReader rdr = cmd.ExecuteReader();
 
                 if (rdr.Read())
                 {
-                    invalidTextbox.Visible = false;
 
-                    frm2.Hide();
-                    Form1 frm1 = new Form1();
-                    frm1.Show();
+                    check = true;
+
+                    Variables.frm2.invalidTextbox.Visible = false;
 
                     Variables.userID = Convert.ToByte(rdr["User_id"]);
                     Variables.admin = Convert.ToByte(rdr["Admin"]);
-                    frm1.RtbUser.Text = rdr["Naam"].ToString();
+
+                    Variables.frm2.Hide();
+                    Variables.frm1 = new Form1();
+                    Variables.frm1.Show();
+
+                    Variables.frm1.RtbUser.Text = rdr["Naam"].ToString();
 
                     if (Variables.admin == 1)
                     {
-                        frm1.pictureBox.Hide();
-                        frm1.specsPanel.Hide();
-                        frm1.EditPanel.Show();
-                        frm1.MeldingPanel.Show();
+                        Variables.frm1.pictureBox.Hide();
+                        Variables.frm1.specsPanel.Hide();
+                        Variables.frm1.EditPanel.Show();
+                        Variables.frm1.MeldingPanel.Show();
                     }
                 }
                 else
                 {
-                    invalidTextbox.Visible = true;
+                    Variables.frm2.invalidTextbox.Visible = true;
                 }
 
                 rdr.Close();
@@ -99,10 +105,17 @@ namespace Reservering_Systeem
             }
 
             connObj.Close();
+
+            if (check)
+            {
+                LoadProductData();
+                LoadReservationData();
+            }
+
             Debug.WriteLine("Done.");
         }
 
-        public void LoadReservationData(FlowLayoutPanel reservatiePanel)
+        public void LoadReservationData()
         {
             try
             {
@@ -110,12 +123,12 @@ namespace Reservering_Systeem
                 Debug.WriteLine("Connecting to MySQL...");
                 connObj.Open();
 
-                string sql = "SELECT reservaties.Datum, producten.Model, producten.Naam FROM reservaties INNER JOIN producten ON reservaties.Product_id = producten.Product_id WHERE reservaties.User_id = 2";
+                string sql = "SELECT reservaties.Datum, producten.Model, producten.Naam FROM reservaties INNER JOIN producten ON reservaties.Product_id = producten.Product_id WHERE reservaties.User_id = @userId";
+
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
-                MySqlDataReader rdr = cmd.ExecuteReader();
-
                 cmd.Parameters.AddWithValue("@userId", Variables.userID);
-
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                
                 while (rdr.Read())
                 {
                     ReservatiePanel addedPanel = new ReservatiePanel();
@@ -124,9 +137,7 @@ namespace Reservering_Systeem
                     addedPanel.TBmodel.Text= rdr["Model"].ToString();
                     addedPanel.TBinleverdatum.Text= rdr["Datum"].ToString();
 
-                    reservatiePanel.Controls.Add(addedPanel);
-
-                    //MessageBox.Show(addedPanel.TBnaam.Text + addedPanel.TBmodel.Text + addedPanel.TBinleverdatum.Text);
+                    Variables.frm1.reservatiePanel.Controls.Add(addedPanel);
                 }
             }
             catch (Exception ex)

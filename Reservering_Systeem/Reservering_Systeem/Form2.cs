@@ -17,6 +17,9 @@ namespace Reservering_Systeem
         public Form2()
         {
             InitializeComponent();
+
+            //Variables.frm1 = new Form1();
+            Variables.frm2 = this;
         }
 
         private void sumbitLogin_Click(object sender, EventArgs e)
@@ -27,7 +30,7 @@ namespace Reservering_Systeem
         private void GetDatabaseData()
         {
             Connection connection = new Connection();
-            connection.LoadUserData(usernameTextbox, passwordTextbox, invalidTextbox, this);
+            connection.LoadUserData();
         }
     }
 }

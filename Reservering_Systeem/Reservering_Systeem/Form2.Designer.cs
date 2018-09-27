@@ -156,12 +156,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox passwordTextbox;
-        private System.Windows.Forms.TextBox usernameTextbox;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button sumbitLogin;
-        private System.Windows.Forms.TextBox invalidTextbox;
+        public System.Windows.Forms.TextBox passwordTextbox;
+        public System.Windows.Forms.TextBox usernameTextbox;
+        public System.Windows.Forms.Button sumbitLogin;
+        public System.Windows.Forms.TextBox invalidTextbox;
     }
 }

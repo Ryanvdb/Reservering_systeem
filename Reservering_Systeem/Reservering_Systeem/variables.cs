@@ -12,5 +12,8 @@ namespace Reservering_Systeem
         public static ProductButton lastButtonClicked;
         public static int userID;
         public static int admin;
+
+        public static Form1 frm1;
+        public static Form2 frm2;
     }
 }
