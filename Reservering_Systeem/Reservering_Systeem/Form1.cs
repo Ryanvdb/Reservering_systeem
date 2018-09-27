@@ -24,7 +24,7 @@ namespace Reservering_Systeem
         private void reservationButton_Click(object sender, EventArgs e)
         {
             connection.SetReservation();
-            //connection.LoadProductData(flowLayoutPanel);
+            connection.LoadProductData();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
