@@ -51,15 +51,21 @@
             this.ExitButton = new System.Windows.Forms.Button();
             this.EditPanel = new System.Windows.Forms.Panel();
             this.reservatiePanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.MeldingenPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.specsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.productPanel.SuspendLayout();
             this.accountPanel.SuspendLayout();
             this.ExitPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // specsPanel
-            // 
+            //
             this.specsPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.specsPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.specsPanel.Controls.Add(this.ageTextbox);
@@ -76,9 +82,9 @@
             this.specsPanel.Size = new System.Drawing.Size(220, 433);
             this.specsPanel.TabIndex = 1;
             this.specsPanel.Visible = false;
-            // 
+            //
             // ageTextbox
-            // 
+            //
             this.ageTextbox.BackColor = System.Drawing.SystemColors.Control;
             this.ageTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ageTextbox.Enabled = false;
@@ -90,9 +96,9 @@
             this.ageTextbox.Size = new System.Drawing.Size(103, 24);
             this.ageTextbox.TabIndex = 7;
             this.ageTextbox.Text = "";
-            // 
+            //
             // idTextbox
-            // 
+            //
             this.idTextbox.BackColor = System.Drawing.SystemColors.Control;
             this.idTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.idTextbox.Enabled = false;
@@ -104,9 +110,9 @@
             this.idTextbox.Size = new System.Drawing.Size(103, 24);
             this.idTextbox.TabIndex = 6;
             this.idTextbox.Text = "";
-            // 
+            //
             // modelTextbox
-            // 
+            //
             this.modelTextbox.BackColor = System.Drawing.SystemColors.Control;
             this.modelTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.modelTextbox.Enabled = false;
@@ -118,9 +124,9 @@
             this.modelTextbox.Size = new System.Drawing.Size(103, 24);
             this.modelTextbox.TabIndex = 5;
             this.modelTextbox.Text = "";
-            // 
+            //
             // nameTextbox
-            // 
+            //
             this.nameTextbox.BackColor = System.Drawing.SystemColors.Control;
             this.nameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nameTextbox.Enabled = false;
@@ -132,9 +138,9 @@
             this.nameTextbox.Size = new System.Drawing.Size(103, 24);
             this.nameTextbox.TabIndex = 4;
             this.nameTextbox.Text = "";
-            // 
+            //
             // richTextBox4
-            // 
+            //
             this.richTextBox4.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox4.Enabled = false;
@@ -145,9 +151,9 @@
             this.richTextBox4.Size = new System.Drawing.Size(106, 24);
             this.richTextBox4.TabIndex = 3;
             this.richTextBox4.Text = "Product Age";
-            // 
+            //
             // richTextBox3
-            // 
+            //
             this.richTextBox3.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox3.Enabled = false;
@@ -158,9 +164,9 @@
             this.richTextBox3.Size = new System.Drawing.Size(106, 24);
             this.richTextBox3.TabIndex = 2;
             this.richTextBox3.Text = "Product ID";
-            // 
+            //
             // richTextBox2
-            // 
+            //
             this.richTextBox2.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox2.Enabled = false;
@@ -171,9 +177,9 @@
             this.richTextBox2.Size = new System.Drawing.Size(106, 24);
             this.richTextBox2.TabIndex = 1;
             this.richTextBox2.Text = "Product Model";
-            // 
+            //
             // richTextBox1
-            // 
+            //
             this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Enabled = false;
@@ -184,9 +190,9 @@
             this.richTextBox1.Size = new System.Drawing.Size(106, 24);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "Product Name";
-            // 
+            //
             // MeldingPanel
-            // 
+            //
             this.MeldingPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MeldingPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MeldingPanel.Location = new System.Drawing.Point(884, 161);
@@ -195,9 +201,9 @@
             this.MeldingPanel.Size = new System.Drawing.Size(220, 433);
             this.MeldingPanel.TabIndex = 8;
             this.MeldingPanel.Visible = false;
-            // 
+            //
             // pictureBox
-            // 
+            //
             this.pictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox.Location = new System.Drawing.Point(224, 80);
@@ -206,19 +212,21 @@
             this.pictureBox.Size = new System.Drawing.Size(656, 405);
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
-            // 
+            //
             // productPanel
-            // 
+            //
             this.productPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.productPanel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.productPanel.Location = new System.Drawing.Point(6, 80);
-            this.productPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.productPanel.Controls.Add(this.panel1);
+            this.productPanel.Controls.Add(this.label1);
+            this.productPanel.Location = new System.Drawing.Point(8, 98);
+            this.productPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.productPanel.Name = "productPanel";
             this.productPanel.Size = new System.Drawing.Size(212, 561);
             this.productPanel.TabIndex = 2;
-            // 
+            //
             // bannerPanel
-            // 
+            //
             this.bannerPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bannerPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.bannerPanel.Location = new System.Drawing.Point(6, 5);
@@ -226,9 +234,9 @@
             this.bannerPanel.Name = "bannerPanel";
             this.bannerPanel.Size = new System.Drawing.Size(873, 70);
             this.bannerPanel.TabIndex = 3;
-            // 
+            //
             // accountPanel
-            // 
+            //
             this.accountPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.accountPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.accountPanel.Controls.Add(this.RtbUser);
@@ -238,9 +246,9 @@
             this.accountPanel.Name = "accountPanel";
             this.accountPanel.Size = new System.Drawing.Size(220, 78);
             this.accountPanel.TabIndex = 4;
-            // 
+            //
             // RtbUser
-            // 
+            //
             this.RtbUser.BackColor = System.Drawing.SystemColors.ControlLight;
             this.RtbUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.RtbUser.Enabled = false;
@@ -251,9 +259,9 @@
             this.RtbUser.Size = new System.Drawing.Size(137, 24);
             this.RtbUser.TabIndex = 9;
             this.RtbUser.Text = "";
-            // 
+            //
             // richTextBox5
-            // 
+            //
             this.richTextBox5.BackColor = System.Drawing.SystemColors.ControlLight;
             this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox5.Enabled = false;
@@ -264,9 +272,9 @@
             this.richTextBox5.Size = new System.Drawing.Size(68, 24);
             this.richTextBox5.TabIndex = 8;
             this.richTextBox5.Text = "Welkom";
-            // 
+            //
             // reservationButton
-            // 
+            //
             this.reservationButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.reservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reservationButton.Location = new System.Drawing.Point(884, 597);
@@ -277,9 +285,9 @@
             this.reservationButton.Text = "Reserveren";
             this.reservationButton.UseVisualStyleBackColor = true;
             this.reservationButton.Click += new System.EventHandler(this.reservationButton_Click);
-            // 
+            //
             // backButton
-            // 
+            //
             this.backButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.Location = new System.Drawing.Point(1062, 597);
@@ -289,9 +297,9 @@
             this.backButton.TabIndex = 5;
             this.backButton.Text = "<";
             this.backButton.UseVisualStyleBackColor = true;
-            // 
+            //
             // flowLayoutPanel
-            // 
+            //
             this.flowLayoutPanel.AutoScroll = true;
             this.flowLayoutPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.flowLayoutPanel.Location = new System.Drawing.Point(223, 489);
@@ -299,18 +307,18 @@
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Size = new System.Drawing.Size(656, 152);
             this.flowLayoutPanel.TabIndex = 6;
-            // 
+            //
             // ExitPanel
-            // 
+            //
             this.ExitPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ExitPanel.Controls.Add(this.ExitButton);
             this.ExitPanel.Location = new System.Drawing.Point(884, 3);
             this.ExitPanel.Name = "ExitPanel";
             this.ExitPanel.Size = new System.Drawing.Size(220, 72);
             this.ExitPanel.TabIndex = 7;
-            // 
+            //
             // ExitButton
-            // 
+            //
             this.ExitButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ExitButton.BackColor = System.Drawing.Color.Firebrick;
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -322,33 +330,90 @@
             this.ExitButton.Text = "X";
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            // 
+            //
             // EditPanel
-            // 
+            //
             this.EditPanel.Location = new System.Drawing.Point(224, 80);
             this.EditPanel.Name = "EditPanel";
             this.EditPanel.Size = new System.Drawing.Size(656, 405);
             this.EditPanel.TabIndex = 8;
-            // 
+            //
             // reservatiePanel
-            // 
+            //
             this.reservatiePanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.reservatiePanel.Location = new System.Drawing.Point(884, 161);
             this.reservatiePanel.Name = "reservatiePanel";
             this.reservatiePanel.Size = new System.Drawing.Size(220, 433);
             this.reservatiePanel.TabIndex = 0;
-            // 
-            // MeldingenPanel
-            // 
+
             this.MeldingenPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MeldingenPanel.Location = new System.Drawing.Point(884, 161);
             this.MeldingenPanel.Name = "MeldingenPanel";
             this.MeldingenPanel.Size = new System.Drawing.Size(220, 433);
             this.MeldingenPanel.TabIndex = 1;
             this.MeldingenPanel.Visible = false;
-            // 
+            //
+            // label1
+            //
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 27);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Product 1";
+            //
+            // panel1
+            //
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(117, 11);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(149, 122);
+            this.panel1.TabIndex = 0;
+            //
+            // label2
+            //
+            this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(26, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 27);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Product 1";
+            //
+            // label3
+            //
+            this.label3.AutoSize = true;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(26, 89);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 27);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Product 1";
+            //
+            // label4
+            //
+            this.label4.AutoSize = true;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(26, 48);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 27);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Product 1";
+            //
             // Form1
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -372,8 +437,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.specsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            this.productPanel.ResumeLayout(false);
+            this.productPanel.PerformLayout();
             this.accountPanel.ResumeLayout(false);
             this.ExitPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -403,5 +472,10 @@
         public System.Windows.Forms.FlowLayoutPanel reservatiePanel;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         public System.Windows.Forms.FlowLayoutPanel MeldingenPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

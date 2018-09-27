@@ -71,6 +71,12 @@
     <Compile Include="ProductButton.Designer.cs">
       <DependentUpon>ProductButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductSelection.Designer.cs">
+      <DependentUpon>ProductSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReservatiePanel.cs">
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProductButton.resx">
       <DependentUpon>ProductButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductSelection.resx">
+      <DependentUpon>ProductSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
