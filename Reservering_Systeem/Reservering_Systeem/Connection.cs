@@ -216,7 +216,7 @@ namespace Reservering_Systeem
                     //addedPanel.TB_Status.Text = rdr[""].ToString();
                     addedPanel.TB_InleveringDatum.Text = rdr["Datum"].ToString();
 
-                    Variables.frm1.reservatiePanel.Controls.Add(addedPanel);
+                    Variables.frm1.AdminPanel.Controls.Add(addedPanel);
                 }
             }
             catch (Exception ex)
