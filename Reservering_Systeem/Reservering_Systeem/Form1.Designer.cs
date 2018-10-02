@@ -50,9 +50,9 @@
             this.ExitPanel = new System.Windows.Forms.Panel();
             this.ExitButton = new System.Windows.Forms.Button();
             this.EditPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox8 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
+            this.editImageButton = new System.Windows.Forms.Button();
+            this.editAgeTextbox = new System.Windows.Forms.RichTextBox();
+            this.editModelTextbox = new System.Windows.Forms.RichTextBox();
             this.editNameTextbox = new System.Windows.Forms.RichTextBox();
             this.reservatiePanel = new System.Windows.Forms.FlowLayoutPanel();
             this.AdminPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -63,6 +63,8 @@
             this.richTextBox9 = new System.Windows.Forms.RichTextBox();
             this.richTextBox10 = new System.Windows.Forms.RichTextBox();
             this.richTextBox11 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
+            this.editStatusTexbox = new System.Windows.Forms.RichTextBox();
             this.specsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.accountPanel.SuspendLayout();
@@ -341,13 +343,15 @@
             // EditPanel
             // 
             this.EditPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.EditPanel.Controls.Add(this.editStatusTexbox);
+            this.EditPanel.Controls.Add(this.richTextBox7);
             this.EditPanel.Controls.Add(this.richTextBox11);
             this.EditPanel.Controls.Add(this.richTextBox10);
             this.EditPanel.Controls.Add(this.richTextBox9);
             this.EditPanel.Controls.Add(this.richTextBox6);
-            this.EditPanel.Controls.Add(this.button1);
-            this.EditPanel.Controls.Add(this.richTextBox8);
-            this.EditPanel.Controls.Add(this.richTextBox7);
+            this.EditPanel.Controls.Add(this.editImageButton);
+            this.EditPanel.Controls.Add(this.editAgeTextbox);
+            this.EditPanel.Controls.Add(this.editModelTextbox);
             this.EditPanel.Controls.Add(this.editNameTextbox);
             this.EditPanel.Location = new System.Drawing.Point(300, 98);
             this.EditPanel.Margin = new System.Windows.Forms.Padding(4);
@@ -356,35 +360,35 @@
             this.EditPanel.TabIndex = 8;
             this.EditPanel.Visible = false;
             // 
-            // button1
+            // editImageButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(186, 136);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 33);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Browse";
-            this.button1.UseVisualStyleBackColor = true;
+            this.editImageButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editImageButton.Location = new System.Drawing.Point(186, 173);
+            this.editImageButton.Name = "editImageButton";
+            this.editImageButton.Size = new System.Drawing.Size(139, 33);
+            this.editImageButton.TabIndex = 3;
+            this.editImageButton.Text = "Browse";
+            this.editImageButton.UseVisualStyleBackColor = true;
             // 
-            // richTextBox8
+            // editAgeTextbox
             // 
-            this.richTextBox8.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox8.Location = new System.Drawing.Point(186, 100);
-            this.richTextBox8.Name = "richTextBox8";
-            this.richTextBox8.Size = new System.Drawing.Size(139, 30);
-            this.richTextBox8.TabIndex = 2;
-            this.richTextBox8.Text = "";
+            this.editAgeTextbox.BackColor = System.Drawing.SystemColors.Control;
+            this.editAgeTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.editAgeTextbox.Location = new System.Drawing.Point(186, 100);
+            this.editAgeTextbox.Name = "editAgeTextbox";
+            this.editAgeTextbox.Size = new System.Drawing.Size(139, 30);
+            this.editAgeTextbox.TabIndex = 2;
+            this.editAgeTextbox.Text = "";
             // 
-            // richTextBox7
+            // editModelTextbox
             // 
-            this.richTextBox7.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox7.Location = new System.Drawing.Point(186, 62);
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(139, 30);
-            this.richTextBox7.TabIndex = 1;
-            this.richTextBox7.Text = "";
+            this.editModelTextbox.BackColor = System.Drawing.SystemColors.Control;
+            this.editModelTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.editModelTextbox.Location = new System.Drawing.Point(186, 62);
+            this.editModelTextbox.Name = "editModelTextbox";
+            this.editModelTextbox.Size = new System.Drawing.Size(139, 30);
+            this.editModelTextbox.TabIndex = 1;
+            this.editModelTextbox.Text = "";
             // 
             // editNameTextbox
             // 
@@ -428,6 +432,7 @@
             this.CreateButton.Text = "Create";
             this.CreateButton.UseVisualStyleBackColor = true;
             this.CreateButton.Visible = false;
+            this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
             // 
             // UpdateButton
             // 
@@ -441,6 +446,7 @@
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = true;
             this.UpdateButton.Visible = false;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // DeleteButton
             // 
@@ -454,6 +460,7 @@
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Visible = false;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // richTextBox6
             // 
@@ -505,7 +512,30 @@
             this.richTextBox11.Name = "richTextBox11";
             this.richTextBox11.Size = new System.Drawing.Size(141, 30);
             this.richTextBox11.TabIndex = 11;
-            this.richTextBox11.Text = "Product Image";
+            this.richTextBox11.Text = "Product Status";
+            // 
+            // richTextBox7
+            // 
+            this.richTextBox7.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox7.Enabled = false;
+            this.richTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox7.Location = new System.Drawing.Point(24, 173);
+            this.richTextBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox7.Name = "richTextBox7";
+            this.richTextBox7.Size = new System.Drawing.Size(141, 30);
+            this.richTextBox7.TabIndex = 12;
+            this.richTextBox7.Text = "Product Image";
+            // 
+            // editStatusTexbox
+            // 
+            this.editStatusTexbox.BackColor = System.Drawing.SystemColors.Control;
+            this.editStatusTexbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.editStatusTexbox.Location = new System.Drawing.Point(186, 137);
+            this.editStatusTexbox.Name = "editStatusTexbox";
+            this.editStatusTexbox.Size = new System.Drawing.Size(139, 30);
+            this.editStatusTexbox.TabIndex = 13;
+            this.editStatusTexbox.Text = "";
             // 
             // Form1
             // 
@@ -572,13 +602,15 @@
         public System.Windows.Forms.Button CreateButton;
         public System.Windows.Forms.Button UpdateButton;
         public System.Windows.Forms.Button DeleteButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox richTextBox8;
-        private System.Windows.Forms.RichTextBox richTextBox7;
-        private System.Windows.Forms.RichTextBox editNameTextbox;
+        private System.Windows.Forms.Button editImageButton;
         private System.Windows.Forms.RichTextBox richTextBox11;
         private System.Windows.Forms.RichTextBox richTextBox10;
         private System.Windows.Forms.RichTextBox richTextBox9;
         private System.Windows.Forms.RichTextBox richTextBox6;
+        public System.Windows.Forms.RichTextBox editAgeTextbox;
+        public System.Windows.Forms.RichTextBox editModelTextbox;
+        public System.Windows.Forms.RichTextBox editNameTextbox;
+        public System.Windows.Forms.RichTextBox editStatusTexbox;
+        private System.Windows.Forms.RichTextBox richTextBox7;
     }
 }

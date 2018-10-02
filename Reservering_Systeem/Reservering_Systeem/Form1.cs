@@ -48,5 +48,20 @@ namespace Reservering_Systeem
             specsPanel.Show();
             reservatiePanel.Hide();
         }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            connection.AdminUpdateProduct();
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            connection.AdminDeleteProduct();
+        }
+
+        private void CreateButton_Click(object sender, EventArgs e)
+        {
+            connection.AdminInsertProduct();
+        }
     }
 }
