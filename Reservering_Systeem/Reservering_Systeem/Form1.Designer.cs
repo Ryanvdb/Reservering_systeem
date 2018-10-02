@@ -46,7 +46,7 @@
             this.richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.reservationButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
-            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.ProductenPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.ExitPanel = new System.Windows.Forms.Panel();
             this.ExitButton = new System.Windows.Forms.Button();
             this.EditPanel = new System.Windows.Forms.Panel();
@@ -292,13 +292,13 @@
             // 
             // flowLayoutPanel
             // 
-            this.flowLayoutPanel.AutoScroll = true;
-            this.flowLayoutPanel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(297, 602);
-            this.flowLayoutPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(875, 187);
-            this.flowLayoutPanel.TabIndex = 6;
+            this.ProductenPanel.AutoScroll = true;
+            this.ProductenPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ProductenPanel.Location = new System.Drawing.Point(297, 602);
+            this.ProductenPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ProductenPanel.Name = "flowLayoutPanel";
+            this.ProductenPanel.Size = new System.Drawing.Size(875, 187);
+            this.ProductenPanel.TabIndex = 6;
             // 
             // ExitPanel
             // 
@@ -367,7 +367,7 @@
             this.Controls.Add(this.MeldingPanel);
             this.Controls.Add(this.specsPanel);
             this.Controls.Add(this.reservationButton);
-            this.Controls.Add(this.flowLayoutPanel);
+            this.Controls.Add(this.ProductenPanel);
             this.Controls.Add(this.ExitPanel);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.accountPanel);
@@ -409,7 +409,7 @@
         public System.Windows.Forms.Panel EditPanel;
         public System.Windows.Forms.Panel MeldingPanel;
         public System.Windows.Forms.FlowLayoutPanel reservatiePanel;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
+        public System.Windows.Forms.FlowLayoutPanel ProductenPanel;
         public System.Windows.Forms.FlowLayoutPanel MeldingenPanel;
         public System.Windows.Forms.FlowLayoutPanel AdminPanel;
     }

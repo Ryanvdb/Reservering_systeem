@@ -18,7 +18,7 @@ namespace Reservering_Systeem
 
         public void LoadProductData()
         {
-            ClearPanels(Variables.frm1.flowLayoutPanel.Controls.Cast<Control>().ToList(),Variables.frm1.flowLayoutPanel);
+            ClearPanels(Variables.frm1.ProductenPanel.Controls.Cast<Control>().ToList(),Variables.frm1.ProductenPanel);
             ClearPanels(Variables.frm1.reservatiePanel.Controls.Cast<Control>().ToList(),Variables.frm1.reservatiePanel);
 
             try
@@ -42,7 +42,7 @@ namespace Reservering_Systeem
                     addedProduct.ProductImage = img((byte[])rdr["ProductImage"]);
 
                     addedProduct.button.Text = addedProduct.modelName;
-                    Variables.frm1.flowLayoutPanel.Controls.Add(addedProduct);
+                    Variables.frm1.ProductenPanel.Controls.Add(addedProduct);
                 }
                 rdr.Close();
             }
