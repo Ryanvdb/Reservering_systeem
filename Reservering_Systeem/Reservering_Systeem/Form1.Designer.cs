@@ -56,7 +56,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.accountPanel.SuspendLayout();
             this.ExitPanel.SuspendLayout();
-            this.reservatiePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // specsPanel
@@ -326,15 +325,15 @@
             // 
             // EditPanel
             // 
-            this.EditPanel.Location = new System.Drawing.Point(224, 80);
+            this.EditPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.EditPanel.Location = new System.Drawing.Point(225, 80);
             this.EditPanel.Name = "EditPanel";
-            this.EditPanel.Size = new System.Drawing.Size(656, 405);
+            this.EditPanel.Size = new System.Drawing.Size(655, 405);
             this.EditPanel.TabIndex = 8;
             // 
             // reservatiePanel
             // 
             this.reservatiePanel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.reservatiePanel.Controls.Add(this.AdminPanel);
             this.reservatiePanel.Location = new System.Drawing.Point(884, 161);
             this.reservatiePanel.Name = "reservatiePanel";
             this.reservatiePanel.Size = new System.Drawing.Size(220, 433);
@@ -343,9 +342,9 @@
             // AdminPanel
             // 
             this.AdminPanel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.AdminPanel.Location = new System.Drawing.Point(3, 3);
+            this.AdminPanel.Location = new System.Drawing.Point(884, 161);
             this.AdminPanel.Name = "AdminPanel";
-            this.AdminPanel.Size = new System.Drawing.Size(220, 433);
+            this.AdminPanel.Size = new System.Drawing.Size(220, 436);
             this.AdminPanel.TabIndex = 1;
             this.AdminPanel.Visible = false;
             // 
@@ -355,13 +354,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1110, 650);
+            this.Controls.Add(this.EditPanel);
+            this.Controls.Add(this.AdminPanel);
             this.Controls.Add(this.reservatiePanel);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.MeldingPanel);
             this.Controls.Add(this.specsPanel);
             this.Controls.Add(this.reservationButton);
             this.Controls.Add(this.flowLayoutPanel);
-            this.Controls.Add(this.EditPanel);
             this.Controls.Add(this.ExitPanel);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.accountPanel);
@@ -376,7 +376,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.accountPanel.ResumeLayout(false);
             this.ExitPanel.ResumeLayout(false);
-            this.reservatiePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
