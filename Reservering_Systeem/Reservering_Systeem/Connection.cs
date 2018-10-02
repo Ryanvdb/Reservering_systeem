@@ -12,14 +12,12 @@ using System.IO;
 namespace Reservering_Systeem
 {
     class Connection
-    {        
+    {
         string connstring = "Server=localhost;Database=reservatie_systeem;Uid=root;SslMode=none";
         MySqlConnection connObj = new MySqlConnection();
 
         public void LoadProductData()
-        {
-            ClearPanels();
-
+        { 
             try
             {
                 connObj.ConnectionString = connstring;
@@ -49,10 +47,8 @@ namespace Reservering_Systeem
             {
                 MessageBox.Show(ex.ToString());
             }
-
             connObj.Close();
             Debug.WriteLine("Done.");
-
         }
 
         public void LoadUserData()
@@ -92,7 +88,7 @@ namespace Reservering_Systeem
                         Variables.frm1.pictureBox.Hide();
                         Variables.frm1.specsPanel.Hide();
                         Variables.frm1.EditPanel.Show();
-                        Variables.frm1.MeldingenPanel.Show();
+                        Variables.frm1.AdminPanel.Show();
                     }
                 }
                 else
@@ -131,14 +127,14 @@ namespace Reservering_Systeem
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
                 cmd.Parameters.AddWithValue("@userId", Variables.userID);
                 MySqlDataReader rdr = cmd.ExecuteReader();
-                
+
                 while (rdr.Read())
                 {
                     ReservatiePanel addedPanel = new ReservatiePanel();
 
                     addedPanel.TBnaam.Text = rdr["Naam"].ToString();
-                    addedPanel.TBmodel.Text= rdr["Model"].ToString();
-                    addedPanel.TBinleverdatum.Text= rdr["Datum"].ToString();
+                    addedPanel.TBmodel.Text = rdr["Model"].ToString();
+                    addedPanel.TBinleverdatum.Text = rdr["Datum"].ToString();
 
                     Variables.frm1.reservatiePanel.Controls.Add(addedPanel);
                 }
@@ -160,7 +156,7 @@ namespace Reservering_Systeem
 
                 string sql = "UPDATE producten SET `status` = 1 WHERE `Product_id` = @product_id";
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
-                
+
                 cmd.Parameters.AddWithValue("@user_id", Variables.userID);
                 cmd.Parameters.AddWithValue("@product_id", Convert.ToByte(Variables.lastButtonClicked.productId));
 
@@ -195,32 +191,50 @@ namespace Reservering_Systeem
 
         }
 
+        bool Melding = false;
+
+        public static double ConvertToUnixTimestamp(DateTime date)
+        {
+            DateTime origin = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            TimeSpan diff = date.ToUniversalTime() - origin;
+            return Math.Floor(diff.TotalSeconds);
+        }
+
+
         public void LoadMeldingData()
         {
             try
             {
-                connObj.ConnectionString = connstring;
-                Debug.WriteLine("Connecting to MySQL...");
-                connObj.Open();
+            connObj.ConnectionString = connstring;
+            Debug.WriteLine("Connecting to MySQL...");
+            connObj.Open();
 
-                string sql = "SELECT * FROM `reservaties`";
+            string sql = "SELECT * FROM `reservaties` WHERE `Datum` < CURRENT_DATE";
 
-                MySqlCommand cmd = new MySqlCommand(sql, connObj);
-                MySqlDataReader rdr = cmd.ExecuteReader();
+            MySqlCommand cmd = new MySqlCommand(sql, connObj);
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            
+            while (rdr.Read())
+            {
+                MeldingPanel addedPanel = new MeldingPanel();
 
-                while (rdr.Read())
-                {
-                    MeldingPanel addedPanel = new MeldingPanel();
+                addedPanel.TB_ReserveringID.Text = rdr["Reservaties_ID"].ToString();
+                addedPanel.TB_InleveringDatum.Text = rdr["Datum"].ToString();
+                Variables.frm1.AdminPanel.Controls.Add(addedPanel);
 
-                    addedPanel.TB_ReserveringID.Text = rdr["Reservaties_ID"].ToString();
-                    //addedPanel.TB_Status.Text = rdr[""].ToString();
-                    addedPanel.TB_InleveringDatum.Text = rdr["Datum"].ToString();
-
-                    Variables.frm1.AdminPanel.Controls.Add(addedPanel);
-                }
+                    if (ConvertToUnixTimestamp(DateTime.Now) > ConvertToUnixTimestamp(DateTime.Parse(rdr["Datum"].ToString())))
+                    {
+                        Melding = true;
+                        if (Melding == true)
+                        {
+                            addedPanel.TB_Status.Text = "over datum";
+                        }
+                    }
+            }
             }
             catch (Exception ex)
             {
+
                 MessageBox.Show(ex.ToString());
             }
             connObj.Close();
@@ -228,23 +242,10 @@ namespace Reservering_Systeem
 
         private Image img(byte[] b)
         {
-            using(var ms = new MemoryStream(b))
+            using (var ms = new MemoryStream(b))
             {
                 return Image.FromStream(ms);
             }
-        }
-
-        private void ClearPanels()
-        {
-            List<Control> listControls = Variables.frm1.flowLayoutPanel.Controls.Cast<Control>().ToList();
-
-            foreach (Control control in listControls)
-            {
-                Variables.frm1.flowLayoutPanel.Controls.Remove(control);
-                control.Dispose();
-            }
-
-            Variables.frm1.pictureBox.Image = null;
         }
     }
 }

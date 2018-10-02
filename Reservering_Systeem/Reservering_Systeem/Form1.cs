@@ -19,10 +19,6 @@ namespace Reservering_Systeem
         public Form1()
         {
             InitializeComponent();
-            if (Variables.admin == 1)
-            {
-                connection.LoadMeldingData();
-            }
         }
 
         private void reservationButton_Click(object sender, EventArgs e)
@@ -34,6 +30,14 @@ namespace Reservering_Systeem
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (Variables.admin == 1)
+            {
+                connection.LoadMeldingData();
+            }
         }
     }
 }
