@@ -98,10 +98,6 @@ namespace Reservering_Systeem
                         Variables.frm1.EditPanel.Show();
                         Variables.frm1.AdminPanel.Show();
                     }
-                    else
-                    {
-                        Variables.frm1.specsPanel.Show();
-                    }
                 }
                 else
                 {

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace Reservering_Systeem
 {
@@ -45,8 +46,33 @@ namespace Reservering_Systeem
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            specsPanel.Show();
+            specsPanel.Hide();
             reservatiePanel.Hide();
+            pictureBox.Image = null;
+        }
+
+        protected string[] pFileNames;
+        protected int pCurrentImage = 0;
+
+        private void BrowseButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            using (var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+
+                    pFileNames = Directory.GetFiles(fbd.SelectedPath, ".png");
+
+                    var testLijst =
+                        Directory.EnumerateFiles(fbd.SelectedPath, ".*", SearchOption.AllDirectories)
+                        .Where(s => s.EndsWith(".png") || s.EndsWith(".jpg"));
+                    pFileNames = testLijst.ToArray();
+                }
+            }
         }
     }
 }
