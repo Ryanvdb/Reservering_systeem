@@ -18,7 +18,9 @@ namespace Reservering_Systeem
 
         public void LoadProductData()
         {
-            ClearPanels();
+            ClearPanels(Variables.frm1.flowLayoutPanel.Controls.Cast<Control>().ToList(),Variables.frm1.flowLayoutPanel);
+            ClearPanels(Variables.frm1.reservatiePanel.Controls.Cast<Control>().ToList(),Variables.frm1.reservatiePanel);
+
             try
             {
                 connObj.ConnectionString = connstring;
@@ -251,20 +253,11 @@ namespace Reservering_Systeem
             }
         }
 
-        private void ClearPanels()
+        private void ClearPanels(List<Control> listControls, FlowLayoutPanel flowLayout)
         {
-            List<Control> listControls = Variables.frm1.flowLayoutPanel.Controls.Cast<Control>().ToList();
-            List<Control> listControls2 = Variables.frm1.reservatiePanel.Controls.Cast<Control>().ToList();
-
             foreach (Control control in listControls)
             {
-                Variables.frm1.flowLayoutPanel.Controls.Remove(control);
-                control.Dispose();
-            }
-
-            foreach (Control control in listControls2)
-            {
-                Variables.frm1.flowLayoutPanel.Controls.Remove(control);
+                flowLayout.Controls.Remove(control);
                 control.Dispose();
             }
 
