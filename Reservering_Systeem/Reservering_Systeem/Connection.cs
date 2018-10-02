@@ -17,7 +17,8 @@ namespace Reservering_Systeem
         MySqlConnection connObj = new MySqlConnection();
 
         public void LoadProductData()
-        { 
+        {
+            ClearPanels();
             try
             {
                 connObj.ConnectionString = connstring;
@@ -85,7 +86,6 @@ namespace Reservering_Systeem
 
                     if (Variables.admin == 1)
                     {
-                        MessageBox.Show("admin = true");
                         Variables.frm1.pictureBox.Hide();
                         Variables.frm1.specsPanel.Hide();
                         Variables.frm1.EditPanel.Show();
@@ -247,6 +247,19 @@ namespace Reservering_Systeem
             {
                 return Image.FromStream(ms);
             }
+        }
+
+        private void ClearPanels()
+        {
+            List<Control> listControls = Variables.frm1.flowLayoutPanel.Controls.Cast<Control>().ToList();
+
+            foreach (Control control in listControls)
+            {
+                Variables.frm1.flowLayoutPanel.Controls.Remove(control);
+                control.Dispose();
+            }
+
+            Variables.frm1.pictureBox.Image = null;
         }
     }
 }
