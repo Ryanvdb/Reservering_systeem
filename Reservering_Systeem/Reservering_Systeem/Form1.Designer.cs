@@ -50,6 +50,12 @@
             this.ExitPanel = new System.Windows.Forms.Panel();
             this.ExitButton = new System.Windows.Forms.Button();
             this.EditPanel = new System.Windows.Forms.Panel();
+            this.editStatusTexbox = new System.Windows.Forms.RichTextBox();
+            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox11 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox10 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
             this.editImageButton = new System.Windows.Forms.Button();
             this.editAgeTextbox = new System.Windows.Forms.RichTextBox();
             this.editModelTextbox = new System.Windows.Forms.RichTextBox();
@@ -59,21 +65,15 @@
             this.CreateButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox10 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox11 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
-            this.editStatusTexbox = new System.Windows.Forms.RichTextBox();
             this.specsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.accountPanel.SuspendLayout();
             this.ExitPanel.SuspendLayout();
             this.EditPanel.SuspendLayout();
             this.SuspendLayout();
-            //
+            // 
             // specsPanel
-            //
+            // 
             this.specsPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.specsPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.specsPanel.Controls.Add(this.ageTextbox);
@@ -90,9 +90,9 @@
             this.specsPanel.Size = new System.Drawing.Size(220, 432);
             this.specsPanel.TabIndex = 1;
             this.specsPanel.Visible = false;
-            //
+            // 
             // ageTextbox
-            //
+            // 
             this.ageTextbox.BackColor = System.Drawing.SystemColors.Control;
             this.ageTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ageTextbox.Enabled = false;
@@ -104,9 +104,9 @@
             this.ageTextbox.Size = new System.Drawing.Size(103, 24);
             this.ageTextbox.TabIndex = 7;
             this.ageTextbox.Text = "";
-            //
+            // 
             // idTextbox
-            //
+            // 
             this.idTextbox.BackColor = System.Drawing.SystemColors.Control;
             this.idTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.idTextbox.Enabled = false;
@@ -118,9 +118,9 @@
             this.idTextbox.Size = new System.Drawing.Size(103, 24);
             this.idTextbox.TabIndex = 6;
             this.idTextbox.Text = "";
-            //
+            // 
             // modelTextbox
-            //
+            // 
             this.modelTextbox.BackColor = System.Drawing.SystemColors.Control;
             this.modelTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.modelTextbox.Enabled = false;
@@ -132,9 +132,9 @@
             this.modelTextbox.Size = new System.Drawing.Size(103, 24);
             this.modelTextbox.TabIndex = 5;
             this.modelTextbox.Text = "";
-            //
+            // 
             // nameTextbox
-            //
+            // 
             this.nameTextbox.BackColor = System.Drawing.SystemColors.Control;
             this.nameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nameTextbox.Enabled = false;
@@ -146,9 +146,9 @@
             this.nameTextbox.Size = new System.Drawing.Size(103, 24);
             this.nameTextbox.TabIndex = 4;
             this.nameTextbox.Text = "";
-            //
+            // 
             // richTextBox4
-            //
+            // 
             this.richTextBox4.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox4.Enabled = false;
@@ -159,9 +159,9 @@
             this.richTextBox4.Size = new System.Drawing.Size(106, 24);
             this.richTextBox4.TabIndex = 3;
             this.richTextBox4.Text = "Product Age";
-            //
+            // 
             // richTextBox3
-            //
+            // 
             this.richTextBox3.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox3.Enabled = false;
@@ -172,9 +172,9 @@
             this.richTextBox3.Size = new System.Drawing.Size(106, 24);
             this.richTextBox3.TabIndex = 2;
             this.richTextBox3.Text = "Product ID";
-            //
+            // 
             // richTextBox2
-            //
+            // 
             this.richTextBox2.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox2.Enabled = false;
@@ -185,9 +185,9 @@
             this.richTextBox2.Size = new System.Drawing.Size(106, 24);
             this.richTextBox2.TabIndex = 1;
             this.richTextBox2.Text = "Product Model";
-            //
+            // 
             // richTextBox1
-            //
+            // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Enabled = false;
@@ -198,9 +198,9 @@
             this.richTextBox1.Size = new System.Drawing.Size(106, 24);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "Product Name";
-            //
+            // 
             // MeldingPanel
-            //
+            // 
             this.MeldingPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MeldingPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MeldingPanel.Location = new System.Drawing.Point(884, 161);
@@ -209,9 +209,9 @@
             this.MeldingPanel.Size = new System.Drawing.Size(220, 324);
             this.MeldingPanel.TabIndex = 8;
             this.MeldingPanel.Visible = false;
-            //
+            // 
             // pictureBox
-            //
+            // 
             this.pictureBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox.Location = new System.Drawing.Point(224, 80);
             this.pictureBox.Margin = new System.Windows.Forms.Padding(2);
@@ -220,9 +220,9 @@
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
-            //
+            // 
             // productPanel
-            //
+            // 
             this.productPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.productPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.productPanel.Location = new System.Drawing.Point(7, 80);
@@ -230,9 +230,9 @@
             this.productPanel.Name = "productPanel";
             this.productPanel.Size = new System.Drawing.Size(212, 561);
             this.productPanel.TabIndex = 2;
-            //
+            // 
             // bannerPanel
-            //
+            // 
             this.bannerPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bannerPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.bannerPanel.Location = new System.Drawing.Point(6, 5);
@@ -240,9 +240,9 @@
             this.bannerPanel.Name = "bannerPanel";
             this.bannerPanel.Size = new System.Drawing.Size(873, 70);
             this.bannerPanel.TabIndex = 3;
-            //
+            // 
             // accountPanel
-            //
+            // 
             this.accountPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.accountPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.accountPanel.Controls.Add(this.RtbUser);
@@ -252,9 +252,9 @@
             this.accountPanel.Name = "accountPanel";
             this.accountPanel.Size = new System.Drawing.Size(220, 78);
             this.accountPanel.TabIndex = 4;
-            //
+            // 
             // RtbUser
-            //
+            // 
             this.RtbUser.BackColor = System.Drawing.SystemColors.ControlLight;
             this.RtbUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.RtbUser.Enabled = false;
@@ -265,9 +265,9 @@
             this.RtbUser.Size = new System.Drawing.Size(137, 24);
             this.RtbUser.TabIndex = 9;
             this.RtbUser.Text = "";
-            //
+            // 
             // richTextBox5
-            //
+            // 
             this.richTextBox5.BackColor = System.Drawing.SystemColors.ControlLight;
             this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox5.Enabled = false;
@@ -278,9 +278,9 @@
             this.richTextBox5.Size = new System.Drawing.Size(68, 24);
             this.richTextBox5.TabIndex = 8;
             this.richTextBox5.Text = "Welkom";
-            //
+            // 
             // reservationButton
-            //
+            // 
             this.reservationButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.reservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reservationButton.Location = new System.Drawing.Point(884, 597);
@@ -291,9 +291,9 @@
             this.reservationButton.Text = "Reserveren";
             this.reservationButton.UseVisualStyleBackColor = true;
             this.reservationButton.Click += new System.EventHandler(this.reservationButton_Click);
-            //
+            // 
             // backButton
-            //
+            // 
             this.backButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.Location = new System.Drawing.Point(1062, 597);
@@ -304,9 +304,9 @@
             this.backButton.Text = "<";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            //
+            // 
             // ProductenPanel
-            //
+            // 
             this.ProductenPanel.AutoScroll = true;
             this.ProductenPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ProductenPanel.Location = new System.Drawing.Point(223, 489);
@@ -314,18 +314,18 @@
             this.ProductenPanel.Name = "ProductenPanel";
             this.ProductenPanel.Size = new System.Drawing.Size(656, 152);
             this.ProductenPanel.TabIndex = 6;
-            //
+            // 
             // ExitPanel
-            //
+            // 
             this.ExitPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ExitPanel.Controls.Add(this.ExitButton);
             this.ExitPanel.Location = new System.Drawing.Point(884, 3);
             this.ExitPanel.Name = "ExitPanel";
             this.ExitPanel.Size = new System.Drawing.Size(220, 72);
             this.ExitPanel.TabIndex = 7;
-            //
+            // 
             // ExitButton
-            //
+            // 
             this.ExitButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ExitButton.BackColor = System.Drawing.Color.Firebrick;
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -337,9 +337,9 @@
             this.ExitButton.Text = "X";
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            //
+            // 
             // EditPanel
-            //
+            // 
             this.EditPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.EditPanel.Controls.Add(this.editStatusTexbox);
             this.EditPanel.Controls.Add(this.richTextBox7);
@@ -356,9 +356,84 @@
             this.EditPanel.Size = new System.Drawing.Size(655, 405);
             this.EditPanel.TabIndex = 8;
             this.EditPanel.Visible = false;
-            //
+            // 
+            // editStatusTexbox
+            // 
+            this.editStatusTexbox.BackColor = System.Drawing.SystemColors.Control;
+            this.editStatusTexbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.editStatusTexbox.Location = new System.Drawing.Point(186, 137);
+            this.editStatusTexbox.Name = "editStatusTexbox";
+            this.editStatusTexbox.Size = new System.Drawing.Size(139, 30);
+            this.editStatusTexbox.TabIndex = 13;
+            this.editStatusTexbox.Text = "";
+            // 
+            // richTextBox7
+            // 
+            this.richTextBox7.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox7.Enabled = false;
+            this.richTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox7.Location = new System.Drawing.Point(24, 173);
+            this.richTextBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox7.Name = "richTextBox7";
+            this.richTextBox7.Size = new System.Drawing.Size(141, 30);
+            this.richTextBox7.TabIndex = 12;
+            this.richTextBox7.Text = "Product Image";
+            // 
+            // richTextBox11
+            // 
+            this.richTextBox11.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox11.Enabled = false;
+            this.richTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox11.Location = new System.Drawing.Point(24, 137);
+            this.richTextBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox11.Name = "richTextBox11";
+            this.richTextBox11.Size = new System.Drawing.Size(141, 30);
+            this.richTextBox11.TabIndex = 11;
+            this.richTextBox11.Text = "Product Status";
+            // 
+            // richTextBox10
+            // 
+            this.richTextBox10.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox10.Enabled = false;
+            this.richTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox10.Location = new System.Drawing.Point(24, 100);
+            this.richTextBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox10.Name = "richTextBox10";
+            this.richTextBox10.Size = new System.Drawing.Size(141, 30);
+            this.richTextBox10.TabIndex = 10;
+            this.richTextBox10.Text = "Product Age";
+            // 
+            // richTextBox9
+            // 
+            this.richTextBox9.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox9.Enabled = false;
+            this.richTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox9.Location = new System.Drawing.Point(24, 62);
+            this.richTextBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox9.Name = "richTextBox9";
+            this.richTextBox9.Size = new System.Drawing.Size(141, 30);
+            this.richTextBox9.TabIndex = 9;
+            this.richTextBox9.Text = "Product Model";
+            // 
+            // richTextBox6
+            // 
+            this.richTextBox6.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox6.Enabled = false;
+            this.richTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox6.Location = new System.Drawing.Point(24, 26);
+            this.richTextBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox6.Name = "richTextBox6";
+            this.richTextBox6.Size = new System.Drawing.Size(141, 30);
+            this.richTextBox6.TabIndex = 8;
+            this.richTextBox6.Text = "Product Name";
+            // 
             // editImageButton
-            //
+            // 
             this.editImageButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editImageButton.Location = new System.Drawing.Point(186, 173);
             this.editImageButton.Name = "editImageButton";
@@ -366,19 +441,10 @@
             this.editImageButton.TabIndex = 3;
             this.editImageButton.Text = "Browse";
             this.editImageButton.UseVisualStyleBackColor = true;
-            //
+            this.editImageButton.Click += new System.EventHandler(this.editImageButton_Click);
+            // 
             // editAgeTextbox
-            //
-<<<<<<< HEAD
-            this.richTextBox8.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox8.Location = new System.Drawing.Point(140, 81);
-            this.richTextBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox8.Name = "richTextBox8";
-            this.richTextBox8.Size = new System.Drawing.Size(104, 24);
-            this.richTextBox8.TabIndex = 2;
-            this.richTextBox8.Text = "";
-=======
+            // 
             this.editAgeTextbox.BackColor = System.Drawing.SystemColors.Control;
             this.editAgeTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.editAgeTextbox.Location = new System.Drawing.Point(186, 100);
@@ -386,20 +452,9 @@
             this.editAgeTextbox.Size = new System.Drawing.Size(139, 30);
             this.editAgeTextbox.TabIndex = 2;
             this.editAgeTextbox.Text = "";
->>>>>>> 533d2b38598312e7268a523a8c460e14f88b2060
-            //
+            // 
             // editModelTextbox
-            //
-<<<<<<< HEAD
-            this.richTextBox7.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox7.Location = new System.Drawing.Point(140, 50);
-            this.richTextBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(104, 24);
-            this.richTextBox7.TabIndex = 1;
-            this.richTextBox7.Text = "";
-=======
+            // 
             this.editModelTextbox.BackColor = System.Drawing.SystemColors.Control;
             this.editModelTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.editModelTextbox.Location = new System.Drawing.Point(186, 62);
@@ -407,39 +462,38 @@
             this.editModelTextbox.Size = new System.Drawing.Size(139, 30);
             this.editModelTextbox.TabIndex = 1;
             this.editModelTextbox.Text = "";
->>>>>>> 533d2b38598312e7268a523a8c460e14f88b2060
-            //
+            // 
             // editNameTextbox
-            //
+            // 
             this.editNameTextbox.BackColor = System.Drawing.SystemColors.Control;
             this.editNameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.editNameTextbox.Location = new System.Drawing.Point(140, 21);
+            this.editNameTextbox.Location = new System.Drawing.Point(186, 26);
             this.editNameTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.editNameTextbox.Name = "editNameTextbox";
-            this.editNameTextbox.Size = new System.Drawing.Size(104, 24);
+            this.editNameTextbox.Size = new System.Drawing.Size(139, 31);
             this.editNameTextbox.TabIndex = 0;
             this.editNameTextbox.Text = "";
-            //
+            // 
             // reservatiePanel
-            //
+            // 
             this.reservatiePanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.reservatiePanel.Location = new System.Drawing.Point(884, 161);
             this.reservatiePanel.Name = "reservatiePanel";
             this.reservatiePanel.Size = new System.Drawing.Size(220, 432);
             this.reservatiePanel.TabIndex = 0;
             this.reservatiePanel.Visible = false;
-            //
+            // 
             // AdminPanel
-            //
+            // 
             this.AdminPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.AdminPanel.Location = new System.Drawing.Point(884, 161);
             this.AdminPanel.Name = "AdminPanel";
             this.AdminPanel.Size = new System.Drawing.Size(220, 324);
             this.AdminPanel.TabIndex = 1;
             this.AdminPanel.Visible = false;
-            //
+            // 
             // CreateButton
-            //
+            // 
             this.CreateButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CreateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateButton.Location = new System.Drawing.Point(884, 501);
@@ -451,9 +505,9 @@
             this.CreateButton.UseVisualStyleBackColor = true;
             this.CreateButton.Visible = false;
             this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
-            //
+            // 
             // UpdateButton
-            //
+            // 
             this.UpdateButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.UpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateButton.Location = new System.Drawing.Point(884, 597);
@@ -465,9 +519,9 @@
             this.UpdateButton.UseVisualStyleBackColor = true;
             this.UpdateButton.Visible = false;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
-            //
+            // 
             // DeleteButton
-            //
+            // 
             this.DeleteButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton.Location = new System.Drawing.Point(884, 549);
@@ -479,84 +533,9 @@
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Visible = false;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
-            //
-            // richTextBox6
-            //
-            this.richTextBox6.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox6.Enabled = false;
-            this.richTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox6.Location = new System.Drawing.Point(24, 26);
-            this.richTextBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(141, 30);
-            this.richTextBox6.TabIndex = 8;
-            this.richTextBox6.Text = "Product Name";
-            //
-            // richTextBox9
-            //
-            this.richTextBox9.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox9.Enabled = false;
-            this.richTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox9.Location = new System.Drawing.Point(24, 62);
-            this.richTextBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox9.Name = "richTextBox9";
-            this.richTextBox9.Size = new System.Drawing.Size(141, 30);
-            this.richTextBox9.TabIndex = 9;
-            this.richTextBox9.Text = "Product Model";
-            //
-            // richTextBox10
-            //
-            this.richTextBox10.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox10.Enabled = false;
-            this.richTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox10.Location = new System.Drawing.Point(24, 100);
-            this.richTextBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox10.Name = "richTextBox10";
-            this.richTextBox10.Size = new System.Drawing.Size(141, 30);
-            this.richTextBox10.TabIndex = 10;
-            this.richTextBox10.Text = "Product Age";
-            //
-            // richTextBox11
-            //
-            this.richTextBox11.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox11.Enabled = false;
-            this.richTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox11.Location = new System.Drawing.Point(24, 137);
-            this.richTextBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox11.Name = "richTextBox11";
-            this.richTextBox11.Size = new System.Drawing.Size(141, 30);
-            this.richTextBox11.TabIndex = 11;
-            this.richTextBox11.Text = "Product Status";
-            //
-            // richTextBox7
-            //
-            this.richTextBox7.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox7.Enabled = false;
-            this.richTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox7.Location = new System.Drawing.Point(24, 173);
-            this.richTextBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(141, 30);
-            this.richTextBox7.TabIndex = 12;
-            this.richTextBox7.Text = "Product Image";
-            //
-            // editStatusTexbox
-            //
-            this.editStatusTexbox.BackColor = System.Drawing.SystemColors.Control;
-            this.editStatusTexbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.editStatusTexbox.Location = new System.Drawing.Point(186, 137);
-            this.editStatusTexbox.Name = "editStatusTexbox";
-            this.editStatusTexbox.Size = new System.Drawing.Size(139, 30);
-            this.editStatusTexbox.TabIndex = 13;
-            this.editStatusTexbox.Text = "";
-            //
+            // 
             // Form1
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -621,7 +600,6 @@
         public System.Windows.Forms.Button CreateButton;
         public System.Windows.Forms.Button UpdateButton;
         public System.Windows.Forms.Button DeleteButton;
-        private System.Windows.Forms.Button editImageButton;
         private System.Windows.Forms.RichTextBox richTextBox11;
         private System.Windows.Forms.RichTextBox richTextBox10;
         private System.Windows.Forms.RichTextBox richTextBox9;
@@ -631,5 +609,6 @@
         public System.Windows.Forms.RichTextBox editNameTextbox;
         public System.Windows.Forms.RichTextBox editStatusTexbox;
         private System.Windows.Forms.RichTextBox richTextBox7;
+        public System.Windows.Forms.Button editImageButton;
     }
 }

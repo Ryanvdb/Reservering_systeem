@@ -54,7 +54,7 @@ namespace Reservering_Systeem
         protected string[] pFileNames;
         protected int pCurrentImage = 0;
 
-        private void BrowseButton_Click(object sender, EventArgs e)
+        private void editImageButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
