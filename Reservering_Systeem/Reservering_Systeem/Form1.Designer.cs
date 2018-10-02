@@ -72,7 +72,7 @@
             this.specsPanel.Controls.Add(this.richTextBox2);
             this.specsPanel.Controls.Add(this.richTextBox1);
             this.specsPanel.Location = new System.Drawing.Point(884, 161);
-            this.specsPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.specsPanel.Margin = new System.Windows.Forms.Padding(2);
             this.specsPanel.Name = "specsPanel";
             this.specsPanel.Size = new System.Drawing.Size(220, 433);
             this.specsPanel.TabIndex = 1;
@@ -85,7 +85,7 @@
             this.ageTextbox.Enabled = false;
             this.ageTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ageTextbox.Location = new System.Drawing.Point(113, 125);
-            this.ageTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ageTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.ageTextbox.Name = "ageTextbox";
             this.ageTextbox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.ageTextbox.Size = new System.Drawing.Size(103, 24);
@@ -99,7 +99,7 @@
             this.idTextbox.Enabled = false;
             this.idTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idTextbox.Location = new System.Drawing.Point(113, 91);
-            this.idTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.idTextbox.Name = "idTextbox";
             this.idTextbox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.idTextbox.Size = new System.Drawing.Size(103, 24);
@@ -113,7 +113,7 @@
             this.modelTextbox.Enabled = false;
             this.modelTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modelTextbox.Location = new System.Drawing.Point(113, 57);
-            this.modelTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.modelTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.modelTextbox.Name = "modelTextbox";
             this.modelTextbox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.modelTextbox.Size = new System.Drawing.Size(103, 24);
@@ -127,7 +127,7 @@
             this.nameTextbox.Enabled = false;
             this.nameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameTextbox.Location = new System.Drawing.Point(113, 23);
-            this.nameTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nameTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.nameTextbox.Name = "nameTextbox";
             this.nameTextbox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.nameTextbox.Size = new System.Drawing.Size(103, 24);
@@ -141,7 +141,7 @@
             this.richTextBox4.Enabled = false;
             this.richTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox4.Location = new System.Drawing.Point(2, 125);
-            this.richTextBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox4.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.Size = new System.Drawing.Size(106, 24);
             this.richTextBox4.TabIndex = 3;
@@ -154,7 +154,7 @@
             this.richTextBox3.Enabled = false;
             this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox3.Location = new System.Drawing.Point(2, 91);
-            this.richTextBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox3.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(106, 24);
             this.richTextBox3.TabIndex = 2;
@@ -167,7 +167,7 @@
             this.richTextBox2.Enabled = false;
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox2.Location = new System.Drawing.Point(2, 57);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(106, 24);
             this.richTextBox2.TabIndex = 1;
@@ -180,7 +180,7 @@
             this.richTextBox1.Enabled = false;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(2, 23);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(106, 24);
             this.richTextBox1.TabIndex = 0;
@@ -191,7 +191,7 @@
             this.MeldingPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MeldingPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MeldingPanel.Location = new System.Drawing.Point(884, 161);
-            this.MeldingPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MeldingPanel.Margin = new System.Windows.Forms.Padding(2);
             this.MeldingPanel.Name = "MeldingPanel";
             this.MeldingPanel.Size = new System.Drawing.Size(220, 433);
             this.MeldingPanel.TabIndex = 8;
@@ -202,7 +202,7 @@
             this.pictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox.Location = new System.Drawing.Point(224, 80);
-            this.pictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(656, 405);
             this.pictureBox.TabIndex = 2;
@@ -223,7 +223,7 @@
             this.bannerPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bannerPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.bannerPanel.Location = new System.Drawing.Point(6, 5);
-            this.bannerPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bannerPanel.Margin = new System.Windows.Forms.Padding(2);
             this.bannerPanel.Name = "bannerPanel";
             this.bannerPanel.Size = new System.Drawing.Size(873, 70);
             this.bannerPanel.TabIndex = 3;
@@ -235,7 +235,7 @@
             this.accountPanel.Controls.Add(this.RtbUser);
             this.accountPanel.Controls.Add(this.richTextBox5);
             this.accountPanel.Location = new System.Drawing.Point(884, 80);
-            this.accountPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.accountPanel.Margin = new System.Windows.Forms.Padding(2);
             this.accountPanel.Name = "accountPanel";
             this.accountPanel.Size = new System.Drawing.Size(220, 78);
             this.accountPanel.TabIndex = 4;
@@ -247,7 +247,7 @@
             this.RtbUser.Enabled = false;
             this.RtbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RtbUser.Location = new System.Drawing.Point(76, 26);
-            this.RtbUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RtbUser.Margin = new System.Windows.Forms.Padding(2);
             this.RtbUser.Name = "RtbUser";
             this.RtbUser.Size = new System.Drawing.Size(137, 24);
             this.RtbUser.TabIndex = 9;
@@ -260,7 +260,7 @@
             this.richTextBox5.Enabled = false;
             this.richTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox5.Location = new System.Drawing.Point(3, 26);
-            this.richTextBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox5.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox5.Name = "richTextBox5";
             this.richTextBox5.Size = new System.Drawing.Size(68, 24);
             this.richTextBox5.TabIndex = 8;
@@ -271,7 +271,7 @@
             this.reservationButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.reservationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reservationButton.Location = new System.Drawing.Point(884, 597);
-            this.reservationButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reservationButton.Margin = new System.Windows.Forms.Padding(2);
             this.reservationButton.Name = "reservationButton";
             this.reservationButton.Size = new System.Drawing.Size(174, 44);
             this.reservationButton.TabIndex = 5;
@@ -284,7 +284,7 @@
             this.backButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.Location = new System.Drawing.Point(1062, 597);
-            this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(42, 44);
             this.backButton.TabIndex = 5;
@@ -296,7 +296,7 @@
             this.flowLayoutPanel.AutoScroll = true;
             this.flowLayoutPanel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.flowLayoutPanel.Location = new System.Drawing.Point(223, 489);
-            this.flowLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Size = new System.Drawing.Size(656, 152);
             this.flowLayoutPanel.TabIndex = 6;
@@ -347,6 +347,7 @@
             this.AdminPanel.Name = "AdminPanel";
             this.AdminPanel.Size = new System.Drawing.Size(220, 433);
             this.AdminPanel.TabIndex = 1;
+            this.AdminPanel.Visible = false;
             // 
             // Form1
             // 

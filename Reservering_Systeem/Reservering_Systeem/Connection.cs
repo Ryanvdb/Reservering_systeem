@@ -85,6 +85,7 @@ namespace Reservering_Systeem
 
                     if (Variables.admin == 1)
                     {
+                        MessageBox.Show("admin = true");
                         Variables.frm1.pictureBox.Hide();
                         Variables.frm1.specsPanel.Hide();
                         Variables.frm1.EditPanel.Show();
