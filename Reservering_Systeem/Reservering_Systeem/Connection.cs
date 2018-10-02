@@ -92,8 +92,15 @@ namespace Reservering_Systeem
                         Variables.frm1.reservatiePanel.Hide();
                         Variables.frm1.pictureBox.Hide();
                         Variables.frm1.specsPanel.Hide();
+                        Variables.frm1.UpdateButton.Show();
+                        Variables.frm1.CreateButton.Show();
+                        Variables.frm1.DeleteButton.Show();
                         Variables.frm1.EditPanel.Show();
                         Variables.frm1.AdminPanel.Show();
+                    }
+                    else
+                    {
+                        Variables.frm1.specsPanel.Show();
                     }
                 }
                 else

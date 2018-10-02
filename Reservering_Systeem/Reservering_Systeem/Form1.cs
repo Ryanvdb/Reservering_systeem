@@ -26,6 +26,8 @@ namespace Reservering_Systeem
             connection.SetReservation();
             connection.LoadProductData();
             connection.LoadReservationData();
+            specsPanel.Hide();
+            reservatiePanel.Show();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -39,6 +41,12 @@ namespace Reservering_Systeem
             {
                 connection.LoadMeldingData();
             }
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            specsPanel.Show();
+            reservatiePanel.Hide();
         }
     }
 }
