@@ -25,6 +25,7 @@ namespace Reservering_Systeem
         {
             connection.SetReservation();
             connection.LoadProductData();
+            connection.LoadReservationData();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
