@@ -18,8 +18,8 @@ namespace Reservering_Systeem
 
         public void LoadProductData()
         {
-            ClearPanels(Variables.frm1.ProductenPanel.Controls.Cast<Control>().ToList(),Variables.frm1.ProductenPanel);
-            ClearPanels(Variables.frm1.reservatiePanel.Controls.Cast<Control>().ToList(),Variables.frm1.reservatiePanel);
+            ClearPanels(Variables.frm1.ProductenPanel.Controls.Cast<Control>().ToList(), Variables.frm1.ProductenPanel);
+            ClearPanels(Variables.frm1.reservatiePanel.Controls.Cast<Control>().ToList(), Variables.frm1.reservatiePanel);
 
             try
             {
@@ -213,22 +213,22 @@ namespace Reservering_Systeem
         {
             try
             {
-            connObj.ConnectionString = connstring;
-            Debug.WriteLine("Connecting to MySQL...");
-            connObj.Open();
+                connObj.ConnectionString = connstring;
+                Debug.WriteLine("Connecting to MySQL...");
+                connObj.Open();
 
-            string sql = "SELECT * FROM `reservaties` WHERE `Datum` < CURRENT_DATE";
+                string sql = "SELECT * FROM `reservaties` WHERE `Datum` < CURRENT_DATE";
 
-            MySqlCommand cmd = new MySqlCommand(sql, connObj);
-            MySqlDataReader rdr = cmd.ExecuteReader();
-            
-            while (rdr.Read())
-            {
-                MeldingPanel addedPanel = new MeldingPanel();
+                MySqlCommand cmd = new MySqlCommand(sql, connObj);
+                MySqlDataReader rdr = cmd.ExecuteReader();
 
-                addedPanel.TB_ReserveringID.Text = rdr["Reservaties_ID"].ToString();
-                addedPanel.TB_InleveringDatum.Text = rdr["Datum"].ToString();
-                Variables.frm1.AdminPanel.Controls.Add(addedPanel);
+                while (rdr.Read())
+                {
+                    MeldingPanel addedPanel = new MeldingPanel();
+
+                    addedPanel.TB_ReserveringID.Text = rdr["Reservaties_ID"].ToString();
+                    addedPanel.TB_InleveringDatum.Text = rdr["Datum"].ToString();
+                    Variables.frm1.AdminPanel.Controls.Add(addedPanel);
 
                     if (ConvertToUnixTimestamp(DateTime.Now) > ConvertToUnixTimestamp(DateTime.Parse(rdr["Datum"].ToString())))
                     {
@@ -238,7 +238,7 @@ namespace Reservering_Systeem
                             addedPanel.TB_Status.Text = "over datum";
                         }
                     }
-            }
+                }
             }
             catch (Exception ex)
             {
@@ -246,6 +246,83 @@ namespace Reservering_Systeem
                 MessageBox.Show(ex.ToString());
             }
             connObj.Close();
+        }
+
+        public void AdminUpdateProduct()
+        {
+            try
+            {
+                connObj.ConnectionString = connstring;
+                Debug.WriteLine("Connecting to MySQL...");
+                connObj.Open();
+
+                string sql = "UPDATE producten SET naam = @naam, leeftijd = @leeftijd, image=@image, model = @model, status = @status WHERE Product_id = @product_id";
+                MySqlCommand cmd = new MySqlCommand(sql, connObj);
+
+                cmd.Parameters.AddWithValue("@naam", Variables.frm1.editNameTextbox);
+                cmd.Parameters.AddWithValue("@model", Variables.frm1.editModelTextbox);
+                cmd.Parameters.AddWithValue("@leeftijd", Variables.frm1.editAgeTextbox);
+                cmd.Parameters.AddWithValue("@status", Variables.frm1.editStatusTexbox);
+                cmd.Parameters.AddWithValue("@image", Variables.frm1.editImageButton);
+
+                MySqlDataReader rdr = cmd.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            connObj.Close();
+            Debug.WriteLine("Done.");
+        }
+
+        public void AdminDeleteProduct()
+        {
+            try
+            {
+                connObj.ConnectionString = connstring;
+                Debug.WriteLine("Connecting to MySQL...");
+                connObj.Open();
+
+                string sql = "DELETE FROM producten WHERE Product_id = @product_id";
+
+                MySqlCommand cmd = new MySqlCommand(sql, connObj);
+                cmd.Parameters.AddWithValue("@product_id", Variables.lastButtonClicked.productId);
+
+                MySqlDataReader rdr = cmd.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            connObj.Close();
+            Debug.WriteLine("Done.");
+        }
+
+        public void AdminInsertProduct()
+        {
+            try
+            {
+                connObj.ConnectionString = connstring;
+                Debug.WriteLine("Connecting to MySQL...");
+                connObj.Open();
+
+                string sql = "INSERT INTO producten (naam, leeftijd, image, model, status) VALUES (@naam, @leeftijd, @image, @model, @ status)";
+
+                MySqlCommand cmd = new MySqlCommand(sql, connObj);
+                cmd.Parameters.AddWithValue("@naam", Variables.frm1.editNameTextbox);
+                cmd.Parameters.AddWithValue("@model", Variables.frm1.editModelTextbox);
+                cmd.Parameters.AddWithValue("@leeftijd", Variables.frm1.editAgeTextbox);
+                cmd.Parameters.AddWithValue("@status", Variables.frm1.editStatusTexbox);
+                cmd.Parameters.AddWithValue("@image", Variables.frm1.editImageButton);
+
+                MySqlDataReader rdr = cmd.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            connObj.Close();
+            Debug.WriteLine("Done.");
         }
 
         private Image img(byte[] b)
