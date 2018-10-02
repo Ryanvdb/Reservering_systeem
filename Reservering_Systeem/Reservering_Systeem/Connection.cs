@@ -313,7 +313,7 @@ namespace Reservering_Systeem
                 cmd.Parameters.AddWithValue("@model", Variables.frm1.editModelTextbox);
                 cmd.Parameters.AddWithValue("@leeftijd", Variables.frm1.editAgeTextbox);
                 cmd.Parameters.AddWithValue("@status", Variables.frm1.editStatusTexbox);
-                cmd.Parameters.AddWithValue("@image", Variables.frm1.editImageButton);
+                cmd.Parameters.AddWithValue("@image", UploadImage());
 
                 MySqlDataReader rdr = cmd.ExecuteReader();
             }
@@ -323,6 +323,13 @@ namespace Reservering_Systeem
             }
             connObj.Close();
             Debug.WriteLine("Done.");
+        }
+
+        private string UploadImage()
+        {
+            string i = Convert.ToString(Variables.image);
+
+            return i;
         }
 
         private Image img(byte[] b)

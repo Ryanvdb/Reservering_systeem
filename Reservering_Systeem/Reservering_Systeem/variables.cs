@@ -15,5 +15,6 @@ namespace Reservering_Systeem
 
         public static Form1 frm1;
         public static Form2 frm2;
+        public static object image;
     }
 }

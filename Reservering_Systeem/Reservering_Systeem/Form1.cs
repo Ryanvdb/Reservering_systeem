@@ -51,28 +51,40 @@ namespace Reservering_Systeem
             pictureBox.Image = null;
         }
 
-        protected string[] pFileNames;
-        protected int pCurrentImage = 0;
-
         private void editImageButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
-            using (var fbd = new FolderBrowserDialog())
+            using (var opd = new  OpenFileDialog())
             {
-                DialogResult result = fbd.ShowDialog();
+                DialogResult result = opd.ShowDialog();
 
-                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                if (result == DialogResult.OK)
                 {
-
-                    pFileNames = Directory.GetFiles(fbd.SelectedPath, ".png");
-
-                    var testLijst =
-                        Directory.EnumerateFiles(fbd.SelectedPath, ".*", SearchOption.AllDirectories)
-                        .Where(s => s.EndsWith(".png") || s.EndsWith(".jpg"));
-                    pFileNames = testLijst.ToArray();
+                    Variables.image = opd.OpenFile();
                 }
             }
+
+            //var fd = new SaveFileDialog();
+            //fd.Filter = "Bmp(.BMP;)|.BMP;| Jpg(Jpg)|.jpg;| Png(Png)|.png;)";
+            //fd.AddExtension = true;
+            //if (fd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            //{
+            //    switch (Path.GetExtension(fd.FileName).ToUpper())
+            //    {
+            //        case ".BMP":
+            //            pictureBox.Image.Save(fd.FileName, System.Drawing.Imaging.ImageFormat.Bmp);
+            //            break;
+            //        case ".JPG":
+            //            pictureBox.Image.Save(fd.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+            //            break;
+            //        case ".PNG":
+            //            pictureBox.Image.Save(fd.FileName, System.Drawing.Imaging.ImageFormat.Png);
+            //            break;
+            //        default:
+            //            break;
+            //    }
+            //}
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
