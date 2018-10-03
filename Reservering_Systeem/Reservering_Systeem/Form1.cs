@@ -41,6 +41,18 @@ namespace Reservering_Systeem
             if (Variables.admin == 1)
             {
                 connection.LoadMeldingData();
+                RechterLabel.Text = "Meldingen";
+            }
+            else
+            {
+                if (reservatiePanel.Visible == true)
+                {
+                    RechterLabel.Text = "Reservaties";
+                }
+                if (specsPanel.Visible == true)
+                {
+                    RechterLabel.Text = "Specificaties";
+                }
             }
         }
 

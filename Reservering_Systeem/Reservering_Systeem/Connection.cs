@@ -92,7 +92,6 @@ namespace Reservering_Systeem
 
                     if (Variables.admin == 1)
                     {
-                        MessageBox.Show("admin = true");
                         Variables.frm1.reservatiePanel.Hide();
                         Variables.frm1.pictureBox.Hide();
                         Variables.frm1.specsPanel.Hide();
@@ -254,7 +253,6 @@ namespace Reservering_Systeem
         {
             try
             {
-                LoadProductData();
                 connObj.ConnectionString = connstring;
                 Debug.WriteLine("Connecting to MySQL...");
                 connObj.Open();
@@ -277,6 +275,7 @@ namespace Reservering_Systeem
             }
             connObj.Close();
             Debug.WriteLine("Done.");
+            LoadProductData();
         }
 
         public void AdminDeleteProduct()
@@ -300,6 +299,7 @@ namespace Reservering_Systeem
             }
             connObj.Close();
             Debug.WriteLine("Done.");
+            LoadProductData();
         }
 
         public void AdminInsertProduct()
@@ -327,6 +327,7 @@ namespace Reservering_Systeem
             }
             connObj.Close();
             Debug.WriteLine("Done.");
+            LoadProductData();
         }
 
         private string UploadImage()

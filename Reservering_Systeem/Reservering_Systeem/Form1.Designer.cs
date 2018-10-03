@@ -65,11 +65,17 @@
             this.CreateButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
+            this.LabelPanel = new System.Windows.Forms.Panel();
+            this.ProductenLabel = new System.Windows.Forms.Label();
+            this.RechterLabelPanel = new System.Windows.Forms.Panel();
+            this.RechterLabel = new System.Windows.Forms.Label();
             this.specsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.accountPanel.SuspendLayout();
             this.ExitPanel.SuspendLayout();
             this.EditPanel.SuspendLayout();
+            this.LabelPanel.SuspendLayout();
+            this.RechterLabelPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // specsPanel
@@ -84,10 +90,10 @@
             this.specsPanel.Controls.Add(this.richTextBox3);
             this.specsPanel.Controls.Add(this.richTextBox2);
             this.specsPanel.Controls.Add(this.richTextBox1);
-            this.specsPanel.Location = new System.Drawing.Point(884, 161);
+            this.specsPanel.Location = new System.Drawing.Point(884, 190);
             this.specsPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.specsPanel.Name = "specsPanel";
-            this.specsPanel.Size = new System.Drawing.Size(220, 432);
+            this.specsPanel.Size = new System.Drawing.Size(220, 403);
             this.specsPanel.TabIndex = 1;
             this.specsPanel.Visible = false;
             // 
@@ -203,10 +209,10 @@
             // 
             this.MeldingPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MeldingPanel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.MeldingPanel.Location = new System.Drawing.Point(884, 161);
+            this.MeldingPanel.Location = new System.Drawing.Point(884, 190);
             this.MeldingPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MeldingPanel.Name = "MeldingPanel";
-            this.MeldingPanel.Size = new System.Drawing.Size(220, 324);
+            this.MeldingPanel.Size = new System.Drawing.Size(220, 295);
             this.MeldingPanel.TabIndex = 8;
             this.MeldingPanel.Visible = false;
             // 
@@ -216,7 +222,7 @@
             this.pictureBox.Location = new System.Drawing.Point(224, 80);
             this.pictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(656, 405);
+            this.pictureBox.Size = new System.Drawing.Size(655, 380);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
@@ -250,7 +256,7 @@
             this.accountPanel.Location = new System.Drawing.Point(884, 80);
             this.accountPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.accountPanel.Name = "accountPanel";
-            this.accountPanel.Size = new System.Drawing.Size(220, 78);
+            this.accountPanel.Size = new System.Drawing.Size(220, 67);
             this.accountPanel.TabIndex = 4;
             // 
             // RtbUser
@@ -353,7 +359,7 @@
             this.EditPanel.Controls.Add(this.editNameTextbox);
             this.EditPanel.Location = new System.Drawing.Point(225, 80);
             this.EditPanel.Name = "EditPanel";
-            this.EditPanel.Size = new System.Drawing.Size(655, 405);
+            this.EditPanel.Size = new System.Drawing.Size(654, 380);
             this.EditPanel.TabIndex = 8;
             this.EditPanel.Visible = false;
             // 
@@ -477,17 +483,17 @@
             // reservatiePanel
             // 
             this.reservatiePanel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.reservatiePanel.Location = new System.Drawing.Point(884, 161);
+            this.reservatiePanel.Location = new System.Drawing.Point(884, 190);
             this.reservatiePanel.Name = "reservatiePanel";
-            this.reservatiePanel.Size = new System.Drawing.Size(220, 432);
+            this.reservatiePanel.Size = new System.Drawing.Size(220, 403);
             this.reservatiePanel.TabIndex = 0;
             // 
             // AdminPanel
             // 
             this.AdminPanel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.AdminPanel.Location = new System.Drawing.Point(884, 161);
+            this.AdminPanel.Location = new System.Drawing.Point(884, 190);
             this.AdminPanel.Name = "AdminPanel";
-            this.AdminPanel.Size = new System.Drawing.Size(220, 324);
+            this.AdminPanel.Size = new System.Drawing.Size(220, 295);
             this.AdminPanel.TabIndex = 1;
             this.AdminPanel.Visible = false;
             // 
@@ -533,6 +539,43 @@
             this.DeleteButton.Visible = false;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
+            // LabelPanel
+            // 
+            this.LabelPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.LabelPanel.Controls.Add(this.ProductenLabel);
+            this.LabelPanel.Location = new System.Drawing.Point(224, 456);
+            this.LabelPanel.Name = "LabelPanel";
+            this.LabelPanel.Size = new System.Drawing.Size(655, 36);
+            this.LabelPanel.TabIndex = 12;
+            // 
+            // ProductenLabel
+            // 
+            this.ProductenLabel.AutoSize = true;
+            this.ProductenLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductenLabel.Location = new System.Drawing.Point(4, 4);
+            this.ProductenLabel.Name = "ProductenLabel";
+            this.ProductenLabel.Size = new System.Drawing.Size(237, 26);
+            this.ProductenLabel.TabIndex = 0;
+            this.ProductenLabel.Text = "Beschikbare Producten";
+            // 
+            // RechterLabelPanel
+            // 
+            this.RechterLabelPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.RechterLabelPanel.Controls.Add(this.RechterLabel);
+            this.RechterLabelPanel.Location = new System.Drawing.Point(884, 152);
+            this.RechterLabelPanel.Name = "RechterLabelPanel";
+            this.RechterLabelPanel.Size = new System.Drawing.Size(220, 33);
+            this.RechterLabelPanel.TabIndex = 13;
+            // 
+            // RechterLabel
+            // 
+            this.RechterLabel.AutoSize = true;
+            this.RechterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RechterLabel.Location = new System.Drawing.Point(3, 7);
+            this.RechterLabel.Name = "RechterLabel";
+            this.RechterLabel.Size = new System.Drawing.Size(0, 24);
+            this.RechterLabel.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,7 +584,8 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1110, 650);
             this.Controls.Add(this.specsPanel);
-            this.Controls.Add(this.reservatiePanel);
+            this.Controls.Add(this.RechterLabelPanel);
+            this.Controls.Add(this.LabelPanel);
             this.Controls.Add(this.CreateButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.UpdateButton);
@@ -556,6 +600,7 @@
             this.Controls.Add(this.accountPanel);
             this.Controls.Add(this.bannerPanel);
             this.Controls.Add(this.productPanel);
+            this.Controls.Add(this.reservatiePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
@@ -566,6 +611,10 @@
             this.accountPanel.ResumeLayout(false);
             this.ExitPanel.ResumeLayout(false);
             this.EditPanel.ResumeLayout(false);
+            this.LabelPanel.ResumeLayout(false);
+            this.LabelPanel.PerformLayout();
+            this.RechterLabelPanel.ResumeLayout(false);
+            this.RechterLabelPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -609,5 +658,9 @@
         public System.Windows.Forms.RichTextBox editStatusTexbox;
         private System.Windows.Forms.RichTextBox richTextBox7;
         public System.Windows.Forms.Button editImageButton;
+        private System.Windows.Forms.Panel LabelPanel;
+        private System.Windows.Forms.Label ProductenLabel;
+        private System.Windows.Forms.Panel RechterLabelPanel;
+        private System.Windows.Forms.Label RechterLabel;
     }
 }
