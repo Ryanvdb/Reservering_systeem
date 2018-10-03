@@ -262,6 +262,7 @@ namespace Reservering_Systeem
                 cmd.Parameters.AddWithValue("@leeftijd", Variables.frm1.editAgeTextbox);
                 cmd.Parameters.AddWithValue("@status", Variables.frm1.editStatusTexbox);
                 cmd.Parameters.AddWithValue("@image", Variables.frm1.editImageButton);
+                cmd.Parameters.AddWithValue("@product_id", Variables.lastButtonClicked.productId);
 
                 MySqlDataReader rdr = cmd.ExecuteReader();
             }
