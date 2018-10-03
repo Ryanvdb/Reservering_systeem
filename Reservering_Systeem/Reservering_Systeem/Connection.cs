@@ -20,7 +20,6 @@ namespace Reservering_Systeem
         {
             ClearPanels(Variables.frm1.ProductenPanel.Controls.Cast<Control>().ToList(), Variables.frm1.ProductenPanel);
             ClearPanels(Variables.frm1.reservatiePanel.Controls.Cast<Control>().ToList(), Variables.frm1.reservatiePanel);
-
             try
             {
                 connObj.ConnectionString = connstring;
@@ -118,7 +117,6 @@ namespace Reservering_Systeem
                 LoadProductData();
                 LoadReservationData();
             }
-
             Debug.WriteLine("Done.");
         }
 
@@ -196,7 +194,6 @@ namespace Reservering_Systeem
                 MessageBox.Show(ex.ToString());
             }
             connObj.Close();
-
         }
 
         bool Melding = false;
@@ -347,7 +344,6 @@ namespace Reservering_Systeem
                 flowLayout.Controls.Remove(control);
                 control.Dispose();
             }
-
             Variables.frm1.pictureBox.Image = null;
         }
     }
