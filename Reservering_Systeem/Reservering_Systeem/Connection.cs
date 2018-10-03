@@ -250,18 +250,19 @@ namespace Reservering_Systeem
         {
             try
             {
+                LoadProductData();
                 connObj.ConnectionString = connstring;
                 Debug.WriteLine("Connecting to MySQL...");
                 connObj.Open();
 
-                string sql = "UPDATE producten SET naam = @naam, leeftijd = @leeftijd, image=@image, model = @model, status = @status WHERE Product_id = @product_id";
+                string sql = "UPDATE producten SET naam = @naam, leeftijd = @leeftijd, model = @model, status = @status WHERE Product_id = @product_id";
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
 
-                cmd.Parameters.AddWithValue("@naam", Variables.frm1.editNameTextbox);
-                cmd.Parameters.AddWithValue("@model", Variables.frm1.editModelTextbox);
-                cmd.Parameters.AddWithValue("@leeftijd", Variables.frm1.editAgeTextbox);
-                cmd.Parameters.AddWithValue("@status", Variables.frm1.editStatusTexbox);
-                cmd.Parameters.AddWithValue("@image", Variables.frm1.editImageButton);
+                cmd.Parameters.AddWithValue("@naam", Variables.frm1.editNameTextbox.Text);
+                cmd.Parameters.AddWithValue("@model", Variables.frm1.editModelTextbox.Text);
+                cmd.Parameters.AddWithValue("@leeftijd", Variables.frm1.editAgeTextbox.Text);
+                cmd.Parameters.AddWithValue("@status", Variables.frm1.editStatusTexbox.Text);
+                //cmd.Parameters.AddWithValue("@image", Variables.frm1.editImageButton);
                 cmd.Parameters.AddWithValue("@product_id", Variables.lastButtonClicked.productId);
 
                 MySqlDataReader rdr = cmd.ExecuteReader();
@@ -305,14 +306,14 @@ namespace Reservering_Systeem
                 Debug.WriteLine("Connecting to MySQL...");
                 connObj.Open();
 
-                string sql = "INSERT INTO producten (naam, leeftijd, image, model, status) VALUES (@naam, @leeftijd, @image, @model, @ status)";
+                string sql = "INSERT INTO producten (naam, leeftijd, model, status) VALUES (@naam, @leeftijd, @model, @status)";
 
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
-                cmd.Parameters.AddWithValue("@naam", Variables.frm1.editNameTextbox);
-                cmd.Parameters.AddWithValue("@model", Variables.frm1.editModelTextbox);
-                cmd.Parameters.AddWithValue("@leeftijd", Variables.frm1.editAgeTextbox);
-                cmd.Parameters.AddWithValue("@status", Variables.frm1.editStatusTexbox);
-                cmd.Parameters.AddWithValue("@image", UploadImage());
+                cmd.Parameters.AddWithValue("@naam", Variables.frm1.editNameTextbox.Text);
+                cmd.Parameters.AddWithValue("@model", Variables.frm1.editModelTextbox.Text);
+                cmd.Parameters.AddWithValue("@leeftijd", Variables.frm1.editAgeTextbox.Text);
+                cmd.Parameters.AddWithValue("@status", Variables.frm1.editStatusTexbox.Text);
+                //cmd.Parameters.AddWithValue("@image", UploadImage());
 
                 MySqlDataReader rdr = cmd.ExecuteReader();
             }
