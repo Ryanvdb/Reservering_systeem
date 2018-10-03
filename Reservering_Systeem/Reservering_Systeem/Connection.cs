@@ -282,6 +282,7 @@ namespace Reservering_Systeem
         {
             try
             {
+                LoadProductData();
                 connObj.ConnectionString = connstring;
                 Debug.WriteLine("Connecting to MySQL...");
                 connObj.Open();
@@ -306,6 +307,7 @@ namespace Reservering_Systeem
         {
             try
             {
+                LoadProductData();
                 connObj.ConnectionString = connstring;
                 Debug.WriteLine("Connecting to MySQL...");
                 connObj.Open();
