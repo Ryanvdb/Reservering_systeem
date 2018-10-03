@@ -42,6 +42,8 @@ namespace Reservering_Systeem
                 Variables.frm1.pictureBox.Image = ProductImage;
                 Variables.frm1.reservatiePanel.Hide();
                 Variables.frm1.specsPanel.Show();
+                Variables.frm1.RechterLabel.Text = "Specificaties";
+
             }
             Variables.lastButtonClicked = this;
         }

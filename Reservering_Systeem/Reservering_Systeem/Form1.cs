@@ -49,10 +49,6 @@ namespace Reservering_Systeem
                 {
                     RechterLabel.Text = "Reservaties";
                 }
-                if (specsPanel.Visible == true)
-                {
-                    RechterLabel.Text = "Specificaties";
-                }
             }
         }
 
@@ -60,6 +56,7 @@ namespace Reservering_Systeem
         {
             specsPanel.Hide();
             reservatiePanel.Show();
+            RechterLabel.Text = "Reservaties";
             pictureBox.Image = null;
         }
 
