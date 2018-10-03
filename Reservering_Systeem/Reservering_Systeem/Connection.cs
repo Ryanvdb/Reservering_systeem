@@ -39,8 +39,10 @@ namespace Reservering_Systeem
                     addedProduct.modelName = rdr["Model"].ToString();
                     addedProduct.productAge = rdr["leeftijd"].ToString();
                     addedProduct.productStatus = rdr["Status"].ToString();
-                    addedProduct.ProductImage = img((byte[])rdr["ProductImage"]);
-
+                    if (rdr["productImage"] != null)
+                    {
+                        addedProduct.ProductImage = img((byte[])rdr["ProductImage"]);
+                    }
                     addedProduct.button.Text = addedProduct.modelName;
                     Variables.frm1.ProductenPanel.Controls.Add(addedProduct);
                 }
