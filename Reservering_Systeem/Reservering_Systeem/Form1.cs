@@ -47,7 +47,7 @@ namespace Reservering_Systeem
         private void backButton_Click(object sender, EventArgs e)
         {
             specsPanel.Hide();
-            reservatiePanel.Hide();
+            reservatiePanel.Show();
             pictureBox.Image = null;
         }
 

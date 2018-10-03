@@ -41,7 +41,7 @@ namespace Reservering_Systeem
                 Variables.frm1.ageTextbox.Text = productAge;
                 Variables.frm1.pictureBox.Image = ProductImage;
             }
-
+            Variables.frm1.reservatiePanel.Hide();
             Variables.frm1.specsPanel.Show();
             Variables.lastButtonClicked = this;
         }
