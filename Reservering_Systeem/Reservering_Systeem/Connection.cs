@@ -30,7 +30,7 @@ namespace Reservering_Systeem
                 MySqlCommand cmd = new MySqlCommand(sql, connObj);
                 MySqlDataReader rdr = cmd.ExecuteReader();
 
-                while (rdr.Read())
+                while (rdr.Read())  
                 {
                     ProductButton addedProduct = new ProductButton();
 
